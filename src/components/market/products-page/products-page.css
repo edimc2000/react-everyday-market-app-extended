@@ -1,0 +1,22 @@
+.products-container-expanded {
+  margin: 0 auto;
+}
+
+.products-container-collapsed {
+  max-width: 10rem;
+  min-height: 100vh;
+  transition: margin-left 1s ease, width 1s ease;
+}
+
+.brand-details-show {
+  width: 970px;
+  margin-left: 4rem;
+  display: block;
+  opacity: 100%;
+  transition: opacity 3s;
+}
+
+.brand-details-hidden {
+  width: 0px;
+  opacity: 0%;
+}

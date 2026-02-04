@@ -1,11 +1,11 @@
-import type { JSX } from "react";
+import type { JSX } from "react"
 import './header.css'
 
 interface HeaderProps {
-  title: string;
+  title: string
 }
 
-function Header({ title }: HeaderProps): JSX.Element {
+const Header = ({ title }: HeaderProps): JSX.Element => {
     return (
         <div className="header-container">
             <header className="app-header app-bg">
@@ -15,7 +15,7 @@ function Header({ title }: HeaderProps): JSX.Element {
                             
                         </div>
                         <div className="menu-dummy">
-                            <img src="../../../public/assets/images/cad.png" alt="" className="menu-icon" />
+                            <img src="/assets/images/cad.png" alt="" className="menu-icon" />
                             EN (CAD) | Find a Store | Sign in | Create an Account |
 
                             <span className="heart">
@@ -39,7 +39,7 @@ function Header({ title }: HeaderProps): JSX.Element {
                 </div>
             </header>
         </div>
-    );
+    )
 }
 
-export default Header;
+export default Header
