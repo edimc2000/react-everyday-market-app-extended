@@ -37,6 +37,8 @@
   flex-wrap: wrap;
   align-items: flex-start;/* Top vertical alignment */
   gap: 20px; /* Space between items */
+  cursor: pointer;
+  
 }
 
 .category-container-collapse {
