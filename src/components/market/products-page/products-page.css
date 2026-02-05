@@ -19,7 +19,7 @@
   transition: margin-left 1s ease, width 1s ease;
 }
 
-.brand-details-show {
+.brand-details {
   width: 970px;
   margin-left: 4rem;
   display: block;
@@ -27,7 +27,7 @@
   transition: opacity 3s;
 }
 
-.brand-details-hidden {
+.brand-details-collapsed {
   width: 0px;
   opacity: 0%;
 }

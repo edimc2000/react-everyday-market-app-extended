@@ -9,7 +9,6 @@ const ProductsPage = () => {
         setAllCollapsed(true)
     }
     return (
-
         <div className="main-container">
             {/* products page works */}
             <div className={`products-container${allCollapsed ? '-collapsed' : ''}`}>
@@ -17,6 +16,11 @@ const ProductsPage = () => {
                     <CategoryMenu isCollapsed={allCollapsed} onCollapseAll={handleCollapseAll} />
                 </div>
             </div >
+
+            <div className = "brand-details-collapsed">
+                testing
+            </div>
+
         </div>
     )
 }
