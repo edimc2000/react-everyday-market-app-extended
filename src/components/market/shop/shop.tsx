@@ -13,7 +13,7 @@ interface ShopProps {
 
 function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: ShopProps) {
 
-    const [availableMerch, setavailableMerch] = useState<IMerchandise[]>([])
+    const [availableMerch, setAvailableMerch] = useState<IMerchandise[]>([])
     const [searchParams, setSearchParams] = useSearchParams()
     const [loading, setLoading] = useState(true)
 
@@ -25,28 +25,22 @@ function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: ShopProp
         if (category && brand) {
             const shopService = new ShopService()
             shopService.getFilteredMerch(category, brand).then((merch) => {
+
+                setAvailableMerch(merch)
                 setLoading(false)
-                setavailableMerch(merch)
-                
+
             })
         }
     }, [category, brand])
 
-    if (loading) {
-        return (
-            <div>
-                <h2>Loading products...</h2>
-            </div>
-        )
-    }
 
 
 
     useEffect(() => {
         if (cartCounter > 0) {
             console.log(`cart counter after adding = ${cartCounter}`)
-            
-            
+
+
             for (let index = 0; index < cartItems.length; index++) {
                 const element = cartItems[index]
                 console.log(`-----ELEMENT: ${element.description}-------`)
@@ -64,11 +58,23 @@ function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: ShopProp
     }
 
 
+
+    if (loading) {
+        return (
+            <>
+loading
+            </>
+        )
+    }
+
+
+
+
     return (
 
         <>
-            {console.log(`merch filtered count: ${availableMerch.length}`)}
-            {category} {brand}
+            
+            {category}22 {brand}
 
             <div className="main-container">
 
