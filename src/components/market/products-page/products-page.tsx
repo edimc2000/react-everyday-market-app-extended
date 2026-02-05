@@ -5,16 +5,16 @@ import { CategoryMenu } from "../category-menu/category-menu"
 const ProductsPage = () => {
     const [allCollapsed, setAllCollapsed] = useState(false)
 
-    const handleToggleAll = () => {
-        setAllCollapsed(!allCollapsed)
+    const handleCollapseAll = () => {
+        setAllCollapsed(true)
     }
     return (
 
         <div className="main-container">
             {/* products page works */}
             <div className={`products-container${allCollapsed ? '-collapsed' : ''}`}>
-                <div className="category-container">
-                    <CategoryMenu isCollapsed={allCollapsed} onToggleAll={handleToggleAll} />
+                <div className={`category-container${allCollapsed ? '-collapse' : ''}`}>
+                    <CategoryMenu isCollapsed={allCollapsed} onCollapseAll={handleCollapseAll} />
                 </div>
             </div >
         </div>

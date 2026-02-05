@@ -41,8 +41,8 @@
   
 }
 
-.category-container-collapse {
-  padding: 10px;
+.category-container-collapsed {
+  padding: 0px 10px;
 }
 
 .product-item {
@@ -60,9 +60,8 @@
 }
 
 .product-item-collapsed {
-  padding: 10px;
-  color: red;
-}
+  padding: 0.001rem 5px;
+ }
 
 
 .category-title {
