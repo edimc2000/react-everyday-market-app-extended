@@ -6,7 +6,7 @@ interface CategoryItemProps {
     longDescription: string
     description: string
     isCollapsed: boolean
-    onCollapseAll: () => void
+    onCollapseAll: (categoryName: string) => void
 }
 
 
@@ -31,7 +31,7 @@ const CategoryItem = (props: CategoryItemProps): JSX.Element => {
 
     const handleClick = () => {
         console.log(`category clicked: ${name}`)
-        onCollapseAll()
+        onCollapseAll(name)
     }
     return (
         <>

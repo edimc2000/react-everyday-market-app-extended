@@ -5,7 +5,7 @@ import { CategoryItem } from "../category-menu-item/category-menu-item"
 
 interface CategoryMenuProps {
     isCollapsed: boolean
-    onCollapseAll: () => void
+    onCollapseAll: (categoryName: string) => void
 }
 
 const CategoryMenu = ({ isCollapsed, onCollapseAll }: CategoryMenuProps): JSX.Element => {
@@ -13,9 +13,8 @@ const CategoryMenu = ({ isCollapsed, onCollapseAll }: CategoryMenuProps): JSX.El
     return (
         <>
             {CATEGORIES.map((category: ICategory) => (
-                <div onClick={onCollapseAll} className={isCollapsed ? 'product-item-collapsed' : 'product-item'} key={category.id}>
+                <div className={isCollapsed ? 'product-item-collapsed' : 'product-item'} key={category.id}>
                     <CategoryItem
-                 
                         name={category.name}
                         imageUrl={category.imageUrl}
                         longDescription={category.longDescription}

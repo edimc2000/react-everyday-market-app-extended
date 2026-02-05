@@ -1,0 +1,101 @@
+.brands-title {
+  color: rgba(0, 0, 0, 0.75);
+  /* font-family: 'Playfair Display', serif; */
+  font-family: 'Open Sans', sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+  display: block;
+  width: 35%;
+  text-transform: uppercase;
+  border-bottom: 0.1rem rgba(133, 133, 133, 0.1) solid;
+}
+
+.brands-container {
+  max-width: 970px;
+  display: flex;
+  flex-wrap: wrap;
+  /* Top vertical alignment */
+  align-items: center;
+  gap: 2rem 2em; /* Space between items */
+  margin-top: 2rem;
+}
+
+.name-logo {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Vertical alignment */
+  justify-content: center; /* Horizontal alignment */
+  gap: 5rem; /* Space between items */
+}
+.brand-name {
+  font-weight: bolder;
+}
+.description {
+ color: rgba(133, 133, 133, 1);
+}
+
+
+.long-description {
+  padding-top: 1rem;
+  font-weight: lighter;
+}
+
+.product-details {
+  font-family: 'Open Sans', sans-serif !important;
+  align-items: flex-start; /* Top alignment */
+  align-content: flex-start; /* Also align the whole content to top */
+  height: fit-content;
+
+  padding-top: 1rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+
+  /* Initial state for animation */
+  opacity: 0;
+  transform: translateY(-5px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  
+  /* Random delay for staggered animation */
+  animation-delay: calc(var(--delay-index, 0) * 1s);
+}
+
+.product-details:hover {
+  animation: subtleOpacityPulse 3s ease-in-out infinite;
+  animation-delay: calc(var(--delay-index, 0) * -0.5s); /* Negative for more randomness */
+}
+
+.brand-logo {
+  width: 5rem;
+}
+
+
+
+/* Keyframes for fade in with slight upward movement */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: For subtle random opacity variation after load */
+@keyframes subtleOpacityPulse {
+  0%  {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.65;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

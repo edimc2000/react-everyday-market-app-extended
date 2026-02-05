@@ -1,12 +1,15 @@
 import { useState } from "react"
 import './products-page.css'
 import { CategoryMenu } from "../category-menu/category-menu"
+import { FilteredBrands } from "../brands/brands"
 
 const ProductsPage = () => {
     const [allCollapsed, setAllCollapsed] = useState(false)
+    const [selectedCategory, setSelectedCategory] = useState('')
 
-    const handleCollapseAll = () => {
+    const handleCollapseAll = (categoryName: string) => {
         setAllCollapsed(true)
+        setSelectedCategory(categoryName)
     }
     return (
         <div className="main-container">
@@ -17,8 +20,8 @@ const ProductsPage = () => {
                 </div>
             </div >
 
-            <div className = "brand-details-collapsed">
-                testing
+            <div className={allCollapsed ? 'brand-details' : 'brand-details-collapsed'}>
+                <FilteredBrands brand={selectedCategory} />
             </div>
 
         </div>
