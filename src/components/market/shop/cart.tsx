@@ -1,5 +1,7 @@
 import { type IMerchandise } from '../models/merchandise'
 import './cart.css'
+import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 interface ICartContents {
@@ -10,11 +12,33 @@ interface ICartContents {
 
 
 function ViewCart({ cartCounter, cartItems }: ICartContents) {
+    const navigate = useNavigate()
+
+    //AI was used on this code to clear time out and re direct when empty 
+    useEffect(() => {
+        if (cartCounter === 0) {
+            const timer = setTimeout(() => {
+                navigate('/')
+            }, 2000)
+            return () => clearTimeout(timer)
+        }
+    }, [cartCounter, navigate])
+
+    if (cartCounter === 0) {
+        return (
+            <div style={{ textAlign: 'center', padding: '50px', fontSize: '18px' }}>
+                <h2>Your cart is empty</h2>
+                <p>Redirecting to home page in 2 seconds...</p>
+            </div>
+        )
+    }
 
     return (
 
         <>
-            <span>{cartCounter}</span>
+            <span>{cartCounter} x 111 </span>
+
+
             <div className='main-container'>
                 {cartItems.map((item) => (
                     <div key={item.id} className="order-container">
