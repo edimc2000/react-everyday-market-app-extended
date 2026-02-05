@@ -25,7 +25,6 @@ function FilteredBrands({ category }: FilteredBrandsProps): JSX.Element {
 
     return (
         <>
-            brand count {brandsList.length} {category}
             <div className="brands-title"> Our Featured Brands</div>
             <div className="brands-container">
 
@@ -35,22 +34,17 @@ function FilteredBrands({ category }: FilteredBrandsProps): JSX.Element {
 
                         <div className="name-logo">
                             <img className="brand-logo" src={brand.imageUrl} alt="{data.name} logo" />
-                                <div className="brand-name"> {brand.name}</div>
+                            <div className="brand-name"> {brand.name}</div>
                         </div>
 
-                        <span>{brand.name}</span>
-                        <span>{brand.longDescription}</span>
-                        <span>{brand.type}</span>
+                        <span className="description">{brand.description}</span>
+                        <span className="long-description">{brand.longDescription}</span>
+
                     </div>
                 ))}
 
 
             </div>
-            
-            <Shop />
-
-            {/* brands page is  working */}
-            <span>Category: {category}</span>
 
         </>
     )

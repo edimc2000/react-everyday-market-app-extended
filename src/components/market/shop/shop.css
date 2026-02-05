@@ -1,5 +1,13 @@
 .merch-container {
   flex: 0 0 calc(33.333% - 14px);
+
+  /* Initial state for animation */
+  opacity: 0;
+  transform: translateY(-5px);
+  animation: fadeInUp 0.8s ease-out forwards;
+
+  /* Random delay for staggered animation */
+  animation-delay: calc(var(--delay-index, 0) * 1s);
 }
 
 .loader-container {
@@ -13,9 +21,8 @@
 }
 
 .loader-container-collapsed {
-  display: none; 
+  display: none;
 }
-
 
 .loader {
   width: 48px;
@@ -90,6 +97,14 @@
   background-color: rgb(255, 153, 0);
   font-size: 0.95rem;
 }
+
+.add-to-cart:hover{
+    background-color: rgb(2, 124, 67);
+    
+    color: white;
+
+}
+
 
 .merch-brand {
   font-family: 'Open Sans', sans-serif !important;
