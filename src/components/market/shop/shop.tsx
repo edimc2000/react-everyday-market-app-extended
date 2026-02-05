@@ -1,33 +1,84 @@
-import { merchandiseItems, type IMerchandise } from '../models/merchandise'
+import { type IMerchandise } from '../models/merchandise'
 import './shop.css'
 import { useSearchParams } from 'react-router-dom'
+import { useState, useEffect } from "react"
+import { ShopService } from '../models/shopService'
 
-function Shop() {
+interface ShopProps {
+    cartCounter: number
+    setCartCounter: (value: number | ((prev: number) => number)) => void
+    cartItems: IMerchandise[]
+    setCartItems: (value: IMerchandise[] | ((prev: IMerchandise[]) => IMerchandise[])) => void
+}
+
+function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: ShopProps) {
+
+    const [availableMerch, setavailableMerch] = useState<IMerchandise[]>([])
     const [searchParams, setSearchParams] = useSearchParams()
+    const [loading, setLoading] = useState(true)
+
 
     const category = searchParams.get('cat')
     const brand = searchParams.get('brand')
 
-    const filteredMerch: IMerchandise[] = merchandiseItems.filter(
-        merch => merch.brandName.toLowerCase() === brand
-            && merch.type.toLowerCase() === category?.toLowerCase()
-    )
+    useEffect(() => {
+        if (category && brand) {
+            const shopService = new ShopService()
+            shopService.getFilteredMerch(category, brand).then((merch) => {
+                setLoading(false)
+                setavailableMerch(merch)
+                
+            })
+        }
+    }, [category, brand])
+
+    if (loading) {
+        return (
+            <div>
+                <h2>Loading products...</h2>
+            </div>
+        )
+    }
+
+
+
+    useEffect(() => {
+        if (cartCounter > 0) {
+            console.log(`cart counter after adding = ${cartCounter}`)
+            
+            
+            for (let index = 0; index < cartItems.length; index++) {
+                const element = cartItems[index]
+                console.log(`-----ELEMENT: ${element.description}-------`)
+
+            }
+        }
+    }, [cartCounter])
+
+    const AddToCart = (item: IMerchandise) => {
+        console.log(`cart counter before adding = ${cartCounter}`)
+
+
+        setCartItems(prev => [...prev, item])
+        setCartCounter(prev => prev + 1)
+    }
+
 
     return (
 
         <>
-            {console.log(`merch filtered count: ${filteredMerch.length}`)}
+            {console.log(`merch filtered count: ${availableMerch.length}`)}
             {category} {brand}
 
             <div className="main-container">
 
                 {
-                    filteredMerch.map((merch) => (
+                    availableMerch.map((merch) => (
                         <div key={merch.id} className="merch-container">
                             <img className="category-image" src={merch.imageUrl} />
-                            {console.log(merch.imageUrl)}
+                            {/* {console.log(merch.imageUrl)} */}
                             <div className='merch-price-container '>
-                                <button className="add-to-cart"> Add to cart</button>
+                                <button className="add-to-cart" onClick={() => AddToCart(merch)}> Add to cart</button>
 
                                 <div className="price-container">
                                     <span className="price1">$</span>

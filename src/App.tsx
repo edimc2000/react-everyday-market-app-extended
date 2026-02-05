@@ -3,28 +3,38 @@ import { useState } from 'react'
 import './App.css'
 import { ProductsPage } from './components/market/products-page/products-page'
 import Header from './components/common/header/header'
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import { Shop } from './components/market/shop/shop'
+import { Shop,  } from './components/market/shop/shop'
+import type { IMerchandise } from './components/market/models/merchandise'
+import { ViewCart } from './components/market/shop/cart'
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cartCounter, setCartCounter] = useState(0)
+  const [cartItems, setCartItems] = useState<IMerchandise[]>([])
 
   return (
     <>
-      <Header title='BARO' />
+      <Header title='BARO' cartCount={cartCounter} />
       {/* <ProductsPage /> */}
 
       <div>
         <Routes>
-          <Route path="/home" element={<Home />} />
           <Route path="/" element={<ProductsPage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/shop" element={<Shop />} />
+
+          <Route path="/shop"
+            element={<Shop cartCounter={cartCounter}
+              setCartCounter={setCartCounter}
+              cartItems={cartItems} setCartItems={setCartItems} />}
+          />
+
+          <Route path="/cart" 
+          
+          element={<ViewCart cartCounter={cartCounter}
+              setCartCounter={setCartCounter}
+              cartItems={cartItems} setCartItems={setCartItems} />}
+          
+          />
 
         </Routes>
       </div>
