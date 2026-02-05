@@ -39,7 +39,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Lightweight stretch fabric athletic top in soft pink with Dri-FIT technology',
     price: 52.99,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/3.webp'
   },
   {
     id: 4,
@@ -59,7 +59,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Cozy fleece-lined hoodie in grey heather with kangaroo pocket',
     price: 95.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/5.webp'
   },
 
   // Adidas items
@@ -71,7 +71,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Iconic black cotton tee featuring the classic three stripes design',
     price: 42.50,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/6.webp'
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Crisp white sport shirt with Climacool ventilation technology',
     price: 58.75,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/7.webp'
   },
   {
     id: 8,
@@ -91,7 +91,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Vibrant red polyester jersey with moisture-wicking fabric for active kids',
     price: 40.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/8.webp'
   },
   {
     id: 9,
@@ -101,7 +101,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Royal blue training top with mesh inserts and ergonomic fit',
     price: 72.99,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/9.webp'
   },
   {
     id: 10,
@@ -111,19 +111,19 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Forest green track jacket with full zip and side pockets',
     price: 110.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/10.webp'
   },
 
   // Vans items
   {
     id: 11,
-    brandName: 'Vans',
+    brandName: 'Birkenstock',
     type: 'men',
     item: 'Checkerboard Print Shirt',
     description: 'Black and white checkerboard pattern button-up shirt in cotton twill',
     price: 55.99,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/11.webp'
   },
   {
     id: 12,
@@ -133,7 +133,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Soft pink cotton tee with vintage Vans logo graphic',
     price: 48.50,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/12.webp'
   },
   {
     id: 13,
@@ -143,7 +143,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Bright orange pullover hoodie with drawstring hood and front pocket',
     price: 62.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/13.webp'
   },
   {
     id: 14,
@@ -153,7 +153,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Charcoal grey plaid flannel shirt with button-down collar',
     price: 78.99,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/14.webp'
   },
   {
     id: 15,
@@ -163,7 +163,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Classic white crop top with "Off The Wall" slogan print',
     price: 44.75,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/15.webp'
   },
 
   // Converse items
@@ -175,7 +175,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Black cotton tee featuring the iconic star chevron logo',
     price: 46.99,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/16.webp'
   },
   {
     id: 17,
@@ -185,7 +185,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Soft burgundy casual shirt with relaxed fit and rolled sleeves',
     price: 54.50,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/17.webp'
   },
   {
     id: 18,
@@ -195,7 +195,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Navy blue pique polo shirt with embroidered logo',
     price: 65.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/18.webp'
   },
   {
     id: 19,
@@ -205,7 +205,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Bright yellow ribbed tank top in lightweight cotton blend',
     price: 41.99,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/19.webp'
   },
   {
     id: 20,
@@ -215,7 +215,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Heather grey crewneck sweatshirt with fleece interior',
     price: 88.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/20.webp'
   },
 
   // Under Armour items
@@ -227,7 +227,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Black compression shirt with HeatGear technology for superior cooling',
     price: 58.99,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/21.webp'
   },
   {
     id: 22,
@@ -237,7 +237,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Royal blue tech tee with anti-odor technology for young athletes',
     price: 42.50,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/22.webp'
   },
   {
     id: 23,
@@ -247,7 +247,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Red thermal base layer with dual-layer fabric for warmth',
     price: 75.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/23.webp'
   },
   {
     id: 24,
@@ -257,7 +257,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Forest green moisture-wicking polo with anti-pick fabric',
     price: 48.99,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/24.webp'
   },
   {
     id: 25,
@@ -267,7 +267,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'White tactical performance shirt with raglan sleeves and stretch construction',
     price: 92.50,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/25.webp'
   },
 
   // New Balance items
@@ -279,7 +279,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Heather grey essential cotton tee with classic NB logo',
     price: 44.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/26.webp'
   },
   {
     id: 27,
@@ -289,7 +289,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Navy blue running shirt with NB DRY moisture-wicking technology',
     price: 56.99,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/27.webp'
   },
   {
     id: 28,
@@ -299,7 +299,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Black performance quarter-zip with brushed back fleece',
     price: 98.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/28.webp'
   },
   {
     id: 29,
@@ -309,7 +309,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Olive green athletic shirt with reflective logo for visibility',
     price: 62.50,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/29.webp'
   },
   {
     id: 30,
@@ -319,7 +319,69 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Classic white sport polo with moisture management fabric',
     price: 70.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/men.webp'
+    imageUrl: '/assets/images/shop/30.webp'
+  },
+
+  // Sleepwear items
+  {
+    id: 31,
+    brandName: 'Furla',
+    type: 'sleepwear',
+    item: 'Silk Lounge Set',
+    description: 'Soft silk lounge set with relaxed fit and breathable finish',
+    price: 120.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/31.webp'
+  },
+  {
+    id: 32,
+    brandName: 'Furla',
+    type: 'sleepwear',
+    item: 'Cotton Pajama Shirt',
+    description: 'Lightweight cotton pajama shirt with piping detail',
+    price: 68.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/32.webp'
+  },
+  {
+    id: 33,
+    brandName: 'Prada',
+    type: 'sleepwear',
+    item: 'Satin Nightgown',
+    description: 'Luxurious satin nightgown with adjustable straps',
+    price: 140.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/33.webp'
+  },
+  {
+    id: 34,
+    brandName: 'Prada',
+    type: 'sleepwear',
+    item: 'Modal Sleep Tee',
+    description: 'Ultra-soft modal sleep tee with relaxed neckline',
+    price: 75.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/34.webp'
+  },
+  {
+    id: 35,
+    brandName: 'Kate Spade',
+    type: 'sleepwear',
+    item: 'Printed Pajama Set',
+    description: 'Playful printed pajama set with matching top and pants',
+    price: 85.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/35.webp'
+  },
+  {
+    id: 36,
+    brandName: 'Kate Spade',
+    type: 'sleepwear',
+    item: 'Robe with Belt',
+    description: 'Cozy sleep robe with tie belt and soft brushed fabric',
+    price: 95.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/36.webp'
   }
 ]
 

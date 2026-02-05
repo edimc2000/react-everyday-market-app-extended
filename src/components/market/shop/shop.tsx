@@ -15,7 +15,7 @@ function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: ShopProp
 
     const [availableMerch, setAvailableMerch] = useState<IMerchandise[]>([])
     const [searchParams, setSearchParams] = useSearchParams()
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
 
 
     const category = searchParams.get('cat')
@@ -23,13 +23,17 @@ function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: ShopProp
 
     useEffect(() => {
         if (category && brand) {
+            setLoading(true)
             const shopService = new ShopService()
-            shopService.getFilteredMerch(category, brand).then((merch) => {
-
-                setAvailableMerch(merch)
-                setLoading(false)
-
-            })
+            shopService.getFilteredMerch(category, brand)
+                .then((merch) => {
+                    setAvailableMerch(merch)
+                })
+                .finally(() => {
+                    setLoading(false)
+                })
+        } else {
+            setLoading(false)
         }
     }, [category, brand])
 
@@ -61,19 +65,17 @@ function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: ShopProp
 
     if (loading) {
         return (
-            <>
-loading
-            </>
+            <div className='loader-container'>
+                <span className="loader"></span>
+                <span className="loader-text">Loading</span>              
+            </div>
         )
     }
-
-
-
 
     return (
 
         <>
-            
+
             {category}22 {brand}
 
             <div className="main-container">

@@ -14,7 +14,7 @@ class ShopService implements IShopService {
                         && item.brandName.toLowerCase() === brand.toLowerCase()
                 )
                 resolve(filtered)
-            }, 2000)
+            }, 500)
         })
     }
 }

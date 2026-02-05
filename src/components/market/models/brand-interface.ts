@@ -29,7 +29,7 @@ export const fashionBrands: IBrand[] = [
   {
     id: '3',
     name: 'Birkenstock',
-    type: ['men', 'women'],
+    type: ['men'],
     description: 'German footwear known for contoured cork footbeds',
     longDescription: 'Birkenstock is a German shoe manufacturer known for its ergonomic sandals with contoured cork footbeds. Founded in 1774, the brand emphasizes foot health and comfort in all its designs.',
    imageUrl: '/assets/images/brands/birkenstock.png'
