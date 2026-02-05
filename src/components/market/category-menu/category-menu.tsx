@@ -3,7 +3,6 @@ import { CATEGORIES, type ICategory } from '../models/category'
 import './category-menu.css'
 import { CategoryItem } from "../category-menu-item/category-menu-item"
 
-
 const categoryMenu: JSX.Element[] = CATEGORIES.map((category: ICategory) => {
     return (
         <div className="product-item" key={category.id}>
