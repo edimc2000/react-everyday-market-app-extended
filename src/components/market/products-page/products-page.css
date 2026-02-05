@@ -9,7 +9,7 @@
 }
 
 
-.products-container-expanded {
+.products-container {
   margin: 0 auto;
 }
 
@@ -80,6 +80,7 @@
 }
 
 .category-title-collapsed {
+  font-family: 'Open Sans', sans-serif !important;
   width: 10rem;
   color: rgb(0, 0, 0);
   background: white;
@@ -118,6 +119,6 @@
   color: rgb(80, 78, 78);
 }
 
-.category-longdesc-hidden {
+.category-longdesc-collapsed {
   display: none;
 }

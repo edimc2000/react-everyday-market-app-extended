@@ -1,4 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
 .main-container {
   padding-top: 2rem;
   width: 1200px;
@@ -8,4 +11,3 @@
   align-items: flex-start; /* Top alignment */
   align-content: flex-start; /* Also align the whole content to top */
 }
-

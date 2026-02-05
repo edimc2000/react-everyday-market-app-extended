@@ -1,14 +1,20 @@
+import { useState } from "react"
 import './products-page.css'
-import { categoryMenu } from "../category-menu/category-menu"
+import { CategoryMenu } from "../category-menu/category-menu"
 
 const ProductsPage = () => {
+    const [allCollapsed, setAllCollapsed] = useState(false)
+
+    const handleToggleAll = () => {
+        setAllCollapsed(!allCollapsed)
+    }
     return (
 
         <div className="main-container">
             {/* products page works */}
-            <div className="products-container-expanded">
+            <div className={`products-container${allCollapsed ? '-collapsed' : ''}`}>
                 <div className="category-container">
-                    {categoryMenu}
+                    <CategoryMenu isCollapsed={allCollapsed} onToggleAll={handleToggleAll} />
                 </div>
             </div >
         </div>

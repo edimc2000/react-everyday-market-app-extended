@@ -1,24 +1,17 @@
-import { useState, type JSX } from "react"
+import type { JSX } from "react"
 
 interface CategoryItemProps {
     name: string
     imageUrl: string
     longDescription: string
     description: string
+    isCollapsed: boolean
+    onToggleAll: () => void
 }
 
 
 function OnCatSelected(props: CategoryItemProps): JSX.Element {
-    const { name, imageUrl, longDescription, description } = props
-
-    const [isCollapsed, setIsCollapsed] = useState(false)
-
-    function handleClick(categoryName: string) {
-        console.log(`button clicked: ${categoryName}`)
-        console.log(`before toggle: ${isCollapsed}`)
-        setIsCollapsed(!isCollapsed)
-        console.log(`after toggle will be: ${!isCollapsed}`)
-    }
+    const { name, imageUrl, longDescription, description, isCollapsed, onToggleAll } = props
 
     const classCategoryTitle = isCollapsed ? 'category-title-collapsed' : 'category-title'
     const classImage = isCollapsed ? 'category-image-collapsed' : 'category-image'
@@ -26,7 +19,7 @@ function OnCatSelected(props: CategoryItemProps): JSX.Element {
 
     return (
         <>
-            <button onClick={() => handleClick(name)}> TESTING THIS BUTTON</button>
+            <button onClick={onToggleAll}> TOGGLE ALL</button>
             <span className={classCategoryTitle}>{name}</span>
             <img className={classImage} src={imageUrl} alt={description + ' image'} />
             <span className={classDescription}>{longDescription}</span>
@@ -35,10 +28,16 @@ function OnCatSelected(props: CategoryItemProps): JSX.Element {
 }
 
 const CategoryItem = (props: CategoryItemProps): JSX.Element => {
-    const { name, imageUrl, longDescription, description } = props
+    const { name, imageUrl, longDescription, description, isCollapsed, onToggleAll } = props
     return (
         <>
-            <OnCatSelected {...props} />
+            <OnCatSelected
+                name={name}
+                imageUrl={imageUrl}
+                longDescription={longDescription}
+                description={description}
+                isCollapsed={isCollapsed}
+                onToggleAll={onToggleAll} />
 
             {/* <span className="category-title">{name}</span>
             <img className="category-image" src={imageUrl} alt={description + ' image'} />
