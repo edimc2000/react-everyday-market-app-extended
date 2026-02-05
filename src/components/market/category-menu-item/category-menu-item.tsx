@@ -10,7 +10,7 @@ interface CategoryItemProps {
 }
 
 
-function OnCatSelected(props: CategoryItemProps): JSX.Element {
+function OnCategorySelected(props: CategoryItemProps): JSX.Element {
     const { name, imageUrl, longDescription, description, isCollapsed } = props
 
     const classCategoryTitle = isCollapsed ? 'category-title category-title-collapsed' : 'category-title'
@@ -36,7 +36,7 @@ const CategoryItem = (props: CategoryItemProps): JSX.Element => {
     return (
         <>
             <div onClick={handleClick}>
-                <OnCatSelected
+                <OnCategorySelected
                     name={name}
                     imageUrl={imageUrl}
                     longDescription={longDescription}

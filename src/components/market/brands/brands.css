@@ -20,6 +20,7 @@
   align-items: center;
   gap: 2rem 2em; /* Space between items */
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .name-logo {
