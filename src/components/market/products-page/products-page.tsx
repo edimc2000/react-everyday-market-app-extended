@@ -21,7 +21,7 @@ const ProductsPage = () => {
             </div >
 
             <div className={allCollapsed ? 'brand-details' : 'brand-details-collapsed'}>
-                <FilteredBrands brand={selectedCategory} />
+                <FilteredBrands brandX={selectedCategory} />
             </div>
 
         </div>
