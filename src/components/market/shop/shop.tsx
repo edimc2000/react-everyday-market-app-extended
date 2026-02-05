@@ -1,4 +1,4 @@
-import { type IMerchandise } from '../models/merchandise'
+import { type IMerchandise, type ICartItem } from '../models/merchandise'
 import './shop.css'
 import { useSearchParams } from 'react-router-dom'
 import { useState, useEffect } from "react"
@@ -7,8 +7,8 @@ import { ShopService } from '../models/shopService'
 interface ShopProps {
     cartCounter: number
     setCartCounter: (value: number | ((prev: number) => number)) => void
-    cartItems: IMerchandise[]
-    setCartItems: (value: IMerchandise[] | ((prev: IMerchandise[]) => IMerchandise[])) => void
+    cartItems: ICartItem[]
+    setCartItems: (value: ICartItem[] | ((prev: ICartItem[]) => ICartItem[])) => void
 }
 
 function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: ShopProps) {
@@ -53,11 +53,22 @@ function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: ShopProp
         }
     }, [cartCounter])
 
-    const AddToCart = (item: IMerchandise) => {
+    const AddToCart = (item: ICartItem) => {
         console.log(`cart counter before adding = ${cartCounter}`)
-
-
-        setCartItems(prev => [...prev, item])
+        
+        const existingItem = cartItems.find(cartItem => cartItem.id === item.id)
+        
+        if (existingItem) {
+            console.log(`Item ID ${item.id} already in cart. Current quantity: ${existingItem.quantity}`)
+            setCartItems(prev => prev.map(cartItem => 
+                cartItem.id === item.id 
+                    ? { ...cartItem, quantity: cartItem.quantity + 1 }
+                    : cartItem
+            ))
+        } else {
+            setCartItems(prev => [...prev, { ...item, quantity: 1 }])
+        }
+        
         setCartCounter(prev => prev + 1)
     }
 

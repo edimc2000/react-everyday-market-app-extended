@@ -1,4 +1,4 @@
-import { type IMerchandise } from '../models/merchandise'
+import { type ICartItem } from '../models/merchandise'
 import './cart.css'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 
 interface ICartContents {
     cartCounter: number
-    cartItems: IMerchandise[]
+    cartItems: ICartItem[]
 
 }
 
@@ -51,6 +51,7 @@ function ViewCart({ cartCounter, cartItems }: ICartContents) {
                             <span className= "brand">{item.brandName} | </span>
                             <span className= "cart-description">{item.item}</span>
                             <span className= "cart-long-description">{item.description}</span>
+                            <span className= "cart-quantity"><strong>Quantity:</strong> {item.quantity}</span>
                         </div>
 
                         <div className='price-container cart-price'>

@@ -9,6 +9,10 @@ export interface IMerchandise {
   imageUrl?: string
 }
 
+export interface ICartItem extends IMerchandise {
+  quantity: number
+}
+
 export const merchandiseItems: IMerchandise[] = [
   // Nike items
   {

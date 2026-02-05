@@ -4,14 +4,14 @@ import './App.css'
 import { ProductsPage } from './components/market/products-page/products-page'
 import Header from './components/common/header/header'
 import { Shop,  } from './components/market/shop/shop'
-import type { IMerchandise } from './components/market/models/merchandise'
+import type { ICartItem } from './components/market/models/merchandise'
 import { ViewCart } from './components/market/shop/cart'
 
 
 
 function App() {
   const [cartCounter, setCartCounter] = useState(0)
-  const [cartItems, setCartItems] = useState<IMerchandise[]>([])
+  const [cartItems, setCartItems] = useState<ICartItem[]>([])
 
   return (
     <>
