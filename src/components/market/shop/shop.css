@@ -1,0 +1,85 @@
+.merch-container {
+  flex: 0 0 calc(33.333% - 14px);
+}
+
+.price1,
+.price2,
+.price3 {
+    
+  font-family: 'Open Sans', sans-serif !important;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  text-align: right;
+  /* white-space: nowrap; */
+  /* align-items: flex-start; */
+   /* border: 1px solid red; */
+   
+}
+
+.price2 {
+  font-size: 1.5rem;
+  margin-top: -5px;
+  padding: 0 0.12rem;
+}
+
+.price1,
+.price3 {
+  font-size:medium;
+  font-weight:400;
+}
+
+
+.price-container {
+  flex: 0 0 30%; /* 20% width */
+  display: flex;
+  justify-content: flex-end; /* Align prices to the right */
+  align-items: flex-start;     
+}
+
+
+
+.merch-price-container {
+  display: flex;
+  width: 100%;
+  align-items: flex-start; /* Top alignment for the entire row */
+  margin: 8px 0;
+}
+
+.add-to-cart {
+  font-family: 'Open Sans', sans-serif !important;
+  flex: 0 0 50%; /* 80% width - fixed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: normal;
+  padding-right: 10px;
+  border: none;
+  padding: 0.5rem 0;
+  border-radius: 1rem;
+  background-color: rgb(255, 153, 0);
+  font-size: 0.95rem;
+
+}
+
+
+
+.merch-brand {
+  font-family: 'Open Sans', sans-serif !important;
+  flex: 0 0 75%; /* 80% width - fixed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bolder;
+  padding-right: 8px; /* Add spacing between brand and price */
+}
+
+.merch-longdesc {
+  font-family: 'Open Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: light;
+  font-style: normal;
+  width: 100%;
+  display: block;
+  padding-top: 0.2rem;
+  color: rgb(80, 78, 78);
+}

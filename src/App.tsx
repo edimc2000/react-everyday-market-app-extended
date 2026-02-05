@@ -3,6 +3,11 @@ import { useState } from 'react'
 import './App.css'
 import { ProductsPage } from './components/market/products-page/products-page'
 import Header from './components/common/header/header'
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import { Shop } from './components/market/shop/shop'
+
 
 
 function App() {
@@ -11,7 +16,19 @@ function App() {
   return (
     <>
       <Header title='BARO' />
-      <ProductsPage />
+      {/* <ProductsPage /> */}
+
+      <div>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<ProductsPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/shop" element={<Shop />} />
+
+        </Routes>
+      </div>
+
 
     </>
   )

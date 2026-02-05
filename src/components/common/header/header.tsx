@@ -2,7 +2,7 @@ import type { JSX } from "react"
 import './header.css'
 
 interface HeaderProps {
-  title: string
+    title: string
 }
 
 const Header = ({ title }: HeaderProps): JSX.Element => {
@@ -11,8 +11,9 @@ const Header = ({ title }: HeaderProps): JSX.Element => {
             <header className="app-header app-bg">
                 <div className="maxHeight flex flex-align-items--center">
                     <div className="logo-menu-container">
-                        <div className="shop-logo"> {title}
-                            
+                        <div className="shop-logo">
+
+                            <a href="/" >{title} </a>
                         </div>
                         <div className="menu-dummy">
                             <img src="/assets/images/cad.png" alt="" className="menu-icon" />
@@ -35,7 +36,7 @@ const Header = ({ title }: HeaderProps): JSX.Element => {
                             </span>
                         </div>
                     </div>
-       
+
                 </div>
             </header>
         </div>
