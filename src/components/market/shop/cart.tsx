@@ -40,24 +40,53 @@ function ViewCart({ cartCounter, cartItems }: ICartContents) {
 
 
             <div className='main-container'>
+
+                <div className="order-container order-header">
+                    <div className="image-container"  >
+                    </div>
+
+                    <div className="order-details-container">
+                    </div>
+
+                    <div className='price-container cart-header'>
+                        Unit Price
+                    </div>
+
+                    <div className='price-container cart-header'>
+                        Sub-total
+                    </div>
+
+                </div>
+
+
                 {cartItems.map((item) => (
                     <div key={item.id} className="order-container">
-
                         <div className="image-container"  >
                             <img className="image" src={item.imageUrl} />
                         </div>
 
                         <div className="order-details-container">
-                            <span className= "brand">{item.brandName} | </span>
-                            <span className= "cart-description">{item.item}</span>
-                            <span className= "cart-long-description">{item.description}</span>
-                            <span className= "cart-quantity"><strong>Quantity:</strong> {item.quantity}</span>
+                            <span className="brand">{item.brandName} | </span>
+                            <span className="cart-description">{item.item}</span>
+                            <span className="cart-long-description">{item.description}</span>
+
+                        <div className='qtty-container '>
+                            <span className="qtty-container-text">Qtty:</span>
+                            <span className="qtty">{item.quantity}</span>
+                        
+                        </div>   
                         </div>
 
                         <div className='price-container cart-price'>
                             <span className='price1'>$</span>
                             <span className='price2'>{item.price.toFixed(0)}</span>
                             <span className='price1'>.{item.price.toFixed(2).split('.')[1]}</span>
+                        </div>
+
+                        <div className='price-container cart-price'>
+                            <span className='price1'>$</span>
+                            <span className='price2'>{(item.price * item.quantity).toFixed(0)}</span>
+                            <span className='price1'>.{(item.price * item.quantity).toFixed(2).split('.')[1]}</span>
                         </div>
 
 
