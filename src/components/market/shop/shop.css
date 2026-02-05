@@ -61,8 +61,6 @@
 
 }
 
-
-
 .merch-brand {
   font-family: 'Open Sans', sans-serif !important;
   flex: 0 0 75%; /* 80% width - fixed */
@@ -78,7 +76,7 @@
   font-optical-sizing: auto;
   font-weight: light;
   font-style: normal;
-  width: 100%;
+  width: 80%;
   display: block;
   padding-top: 0.2rem;
   color: rgb(80, 78, 78);
