@@ -107,9 +107,14 @@ npm run preview
 ### Home Page - Category Selection
 ![Category Menu](./screenshots/1_category_page.png)
 
-### Brand Display
+### Brands - filtered based on category
 ![Brands View](./screenshots/2_category_men.png)
 
+### Shop - filtered based on brand 
+![Brands View](./screenshots/3_shop.png)
+
+### View cart items
+![Brands View](./screenshots/4-view_cart.png)
 
 
 
