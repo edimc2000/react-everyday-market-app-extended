@@ -178,8 +178,8 @@ npm run preview
 </details>
 
 ## Utility Functions
-
 <details>
+
 ### generateUPC(id: number)
 - Creates consistent 15-digit UPC from merchandise ID
 - Uses Luhn checksum algorithm for validation
