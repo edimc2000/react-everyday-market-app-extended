@@ -1,8 +1,19 @@
 import type { JSX } from 'react'
 import { type ICartItem } from '../components/market/models/merchandise'
 
+
+/**
+ * Static component class for rendering cart UI elements
+ * @class CartDisplay
+ * @description Contains reusable cart display components as static methods
+ */
 export class CartDisplay {
 
+    /**
+    * Renders the cart table header with column labels
+    * @static
+    * @returns {JSX.Element} Header component with price columns
+    */
     static CartHeader = (): JSX.Element => {
         return (
             <div className="order-container order-header">
@@ -14,6 +25,11 @@ export class CartDisplay {
         )
     }
 
+    /**
+    * Displays empty cart message with redirect notification
+    * @static
+    * @returns {JSX.Element} Empty state component
+    */
     static CartEmptyMessage = (): JSX.Element => {
         return (
             <div className="empty-cart">
@@ -24,8 +40,18 @@ export class CartDisplay {
     }
 }
 
+
+/**
+ * Cart state management interface with React setter patterns
+ * @interface ICartContents
+ * @property {number} id - Unique cart identifier
+ * @property {number} cartCounter - Total items count in cart
+ * @property {Function} setCartCounter - State setter for cartCounter (supports functional updates)
+ * @property {ICartItem[]} cartItems - Array of cart items
+ * @property {Function} setCartItems - State setter for cartItems (supports functional updates)
+ */
 export interface ICartContents {
-    id: number
+    id?: number
     cartCounter: number
     setCartCounter: (value: number | ((prev: number) => number)) => void
     cartItems: ICartItem[]

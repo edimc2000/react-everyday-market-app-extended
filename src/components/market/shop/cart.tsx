@@ -2,9 +2,34 @@ import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 
 import { generateUPC } from '../models/merchandise'
-import { Icons } from '../../../helpers/helper'
+import { Icons } from '../../../helpers/display-helper'
 import { CartDisplay, type ICartContents } from '../../../helpers/cart-helper'
 import './cart.css'
+
+
+
+/**
+ * ViewCart Component Documentation - AI Assisted Documentation
+ * 
+ * This component renders the shopping cart page with item display, 
+ * quantity management, and automatic empty cart handling.
+ * 
+ * @component
+ * @param {ICartContents} props - Cart state and state setters
+ * @param {number} props.cartCounter - Total number of items in cart
+ * @param {Function} props.setCartCounter - Setter for cartCounter
+ * @param {ICartItem[]} props.cartItems - Array of cart items
+ * @param {Function} props.setCartItems - Setter for cartItems
+ * @returns {JSX.Element} Cart page component
+ * 
+ * @example
+ * <ViewCart 
+ *   cartCounter={cartCounter}
+ *   setCartCounter={setCartCounter}
+ *   cartItems={cartItems}
+ *   setCartItems={setCartItems}
+ * />
+ */
 
 const ViewCart = ({ cartCounter, setCartCounter, cartItems, setCartItems }: ICartContents) =>{
     const navigate = useNavigate()

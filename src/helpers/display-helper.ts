@@ -1,4 +1,6 @@
-
+/**
+ * Static icon path collection for SVG rendering
+ */
 
 export class Icons {
 

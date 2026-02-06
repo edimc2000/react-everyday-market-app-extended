@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import { ProductsPage } from './components/market/products-page/products-page'
 import Header from './components/common/header/header'
-import { Shop,  } from './components/market/shop/shop'
+import { Shop, } from './components/market/shop/shop'
 import type { ICartItem } from './components/market/models/merchandise'
 import { ViewCart } from './components/market/shop/cart'
 
@@ -16,24 +16,29 @@ function App() {
   return (
     <>
       <Header title='BARO' cartCount={cartCounter} />
-      {/* <ProductsPage /> */}
-
+      
       <div>
         <Routes>
-          <Route path="/" element={<ProductsPage />} />
-
-          <Route path="/shop"
-            element={<Shop cartCounter={cartCounter}
-              setCartCounter={setCartCounter}
-              cartItems={cartItems} setCartItems={setCartItems} />}
+      
+          <Route path="/"
+            element={<ProductsPage
+            />}
           />
 
-          <Route path="/cart" 
-          
-          element={<ViewCart cartCounter={cartCounter}
+          <Route path="/shop"
+            element={<Shop
+              cartCounter={cartCounter}
               setCartCounter={setCartCounter}
-              cartItems={cartItems} setCartItems={setCartItems} />}
-          
+              cartItems={cartItems} setCartItems={setCartItems}
+            />}
+          />
+
+          <Route path="/cart"
+            element={<ViewCart
+              cartCounter={cartCounter}
+              setCartCounter={setCartCounter}
+              cartItems={cartItems} setCartItems={setCartItems}
+            />}
           />
 
         </Routes>

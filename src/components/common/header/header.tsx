@@ -1,7 +1,7 @@
 import type { JSX } from "react"
 import './header.css'
 import { useNavigate } from "react-router-dom"
-import { Icons } from '../../../helpers/helper'
+import { Icons } from '../../../helpers/display-helper'
 
 interface HeaderProps {
     title: string
