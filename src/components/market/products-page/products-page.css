@@ -1,3 +1,6 @@
+
+/** This css has been copied from the angular implementation of this app  with minimal adjustments to match the aspect ration of the original */
+
 .main-container {
   padding-top: 2rem;
   width: 1200px;
@@ -7,7 +10,6 @@
   align-items: flex-start; /* Top alignment */
   align-content: flex-start; /* Also align the whole content to top */
 }
-
 
 .products-container {
   margin: 0 auto;

@@ -13,6 +13,9 @@ export interface ICartItem extends IMerchandise {
   quantity?: number
 }
 
+
+// the merch items were generated with the help of AI for demo and sampling purposed 
+
 export const merchandiseItems: IMerchandise[] = [
   // Nike items
   {
@@ -1104,7 +1107,7 @@ export function getMerchandiseByBrandAndType(brandName: string, type: string): I
 }
 
 
-// this method was created with AI assistance (GitHub Co-Pilot)
+// This method was created with AI assistance (GitHub Co-Pilot)
 export function generateUPC(id: number): string {
   // Generate a consistent 15-digit UPC from merchandise ID
   // Format: prefix(1) + padded-id(8) + sequence(4) + checksum(2)

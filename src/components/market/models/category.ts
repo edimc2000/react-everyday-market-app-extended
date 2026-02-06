@@ -1,3 +1,5 @@
+/** This file was copied from the App's angular implementation */
+
 export interface ICategory {
     id: number;
     name: string;

@@ -1,3 +1,5 @@
+/** This file was copied from the App's angular implementation */
+
 export interface IBrand {
   id: string;
   name: string;
@@ -93,11 +95,4 @@ export const fashionBrands: IBrand[] = [
   }
 ]
 
-// Export helper functions if needed
-export function getBrandById(id: string): IBrand | undefined {
-  return fashionBrands.find(brand => brand.id === id)
-}
 
-// export function getBrandsByType(type: string): IBrand[] {
-//   return fashionBrands.filter(brand => brand.type.toLowerCase().includes(type.toLowerCase()));
-// }

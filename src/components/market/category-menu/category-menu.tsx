@@ -1,14 +1,23 @@
-import type { JSX } from "react"
+import { type JSX } from "react"
 import { CATEGORIES, type ICategory } from '../models/category'
-import './category-menu.css'
 import { CategoryItem } from "../category-menu-item/category-menu-item"
+import './category-menu.css'
 
-interface CategoryMenuProps {
+
+interface ICategoryMenuProps {
     isCollapsed: boolean
     onCollapseAll: (categoryName: string) => void
 }
 
-const CategoryMenu = ({ isCollapsed, onCollapseAll }: CategoryMenuProps): JSX.Element => {
+/**
+ * CategoryMenu Component
+ * Renders a list of category items with collapsible styling
+ * 
+ * @component
+ * @param {ICategoryMenuProps} props - Menu state and collapse handler
+ * @returns {JSX.Element} List of interactive category items
+ */
+const CategoryMenu = ({ isCollapsed, onCollapseAll }: ICategoryMenuProps): JSX.Element => {
 
     return (
         <>
