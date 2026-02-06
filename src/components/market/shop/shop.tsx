@@ -6,13 +6,13 @@ import { type IShopProps, ShopService } from '../../../helpers/shop-service'
 import './shop.css'
 
 
-function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: IShopProps) {
+const Shop = ({ cartCounter, setCartCounter, cartItems, setCartItems }: IShopProps) => {
 
     const [availableMerch, setAvailableMerch] = useState<IMerchandise[]>([])
     const [searchParams, setSearchParams] = useSearchParams()
     const [loading, setLoading] = useState(false)
 
-
+    // read params on the URL 
     const category = searchParams.get('cat')
     const brand = searchParams.get('brand')
 
