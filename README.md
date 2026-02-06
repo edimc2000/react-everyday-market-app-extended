@@ -96,7 +96,7 @@ npm run build
 To preview the production build locally:
 
 ```bash
-npm run preview
+npm run dev
 ```
 
 
@@ -165,14 +165,13 @@ npm run preview
 <details>
 
 ### ShopService
-- Async merchandise filtering with simulated 500ms API delay
+- Async merchandise filtering with simulated 2000ms API delay
 - Promise-based getFilteredMerch(category, brand) method
 - Uses helper functions for case-insensitive filtering
 
 ### CartDisplay (Static Components)
 - `renderCartHeader()`: Renders cart table header
 - `renderEmptyCartMessage()`: Displays empty cart state
-- `deleteCartItem()`: Removes item and updates state
 
 ### Icons (Static Utility)
 - SVG path constants for deleteIcon, shoppingCart, wishList
@@ -210,13 +209,6 @@ interface IMerchandise {
 }
 ```
 
-#### ICartItem
-Cart item extending merchandise with quantity tracking
-```typescript
-interface ICartItem extends IMerchandise {
-  quantity?: number
-}
-```
 
 #### ICategory
 Product category definition
@@ -246,84 +238,6 @@ interface IBrand {
 ```
 </details>
 
-### Component Props Interfaces
-<details>
-
-#### IShopProps
-Shop component cart state management
-```typescript
-interface IShopProps {
-  cartCounter: number
-  setCartCounter: (value: number | ((prev: number) => number)) => void
-  cartItems: ICartItem[]
-  setCartItems: (value: ICartItem[] | ((prev: ICartItem[]) => ICartItem[])) => void
-}
-```
-
-#### ICartContents
-Cart state management with React setter patterns
-```typescript
-interface ICartContents {
-  id?: number
-  cartCounter: number
-  setCartCounter: (value: number | ((prev: number) => number)) => void
-  cartItems: ICartItem[]
-  setCartItems: (value: ICartItem[] | ((prev: ICartItem[]) => ICartItem[])) => void
-}
-```
-
-#### ICategoryMenuProps
-Category menu component props
-```typescript
-interface ICategoryMenuProps {
-  isCollapsed: boolean
-  onCollapseAll: (categoryName: string) => void
-}
-```
-
-#### ICategoryItemProps
-Individual category item props
-```typescript
-interface ICategoryItemProps {
-  name: string
-  imageUrl: string
-  longDescription: string
-  description: string
-  isCollapsed: boolean
-  onCollapseAll: (categoryName: string) => void
-}
-```
-
-#### IFilteredBrandsProps
-Brands display component props
-```typescript
-interface IFilteredBrandsProps {
-  category: string
-}
-```
-
-#### HeaderProps
-Application header props
-```typescript
-interface HeaderProps {
-  title: string
-  cartCount?: number
-}
-```
-</details>
-
-
-### Service Interfaces
-<details>
-
-#### IShopService
-Shop service filtering operations
-```typescript
-interface IShopService {
-  getFilteredMerch(cat: string, brand: string): Promise<IMerchandise[]>
-}
-```
-</details>
 
 ### Data Sets
 - **105 merchandise items** across 6 types and 9 brands

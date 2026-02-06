@@ -104,8 +104,8 @@ const ViewCart = (
 
                         <div className='price-container cart-price'>
                             <span className='price1'>$</span>
-                            <span className='price2'>{(item.price * item.quantity).toFixed(0)}</span>
-                            <span className='price1'>.{(item.price * item.quantity).toFixed(2).split('.')[1]}</span>
+                            <span className='price2'>{(item.price * item.quantity!).toFixed(0)}</span>
+                            <span className='price1'>.{(item.price * item.quantity!).toFixed(2).split('.')[1]}</span>
                         </div>
 
                     </div>
