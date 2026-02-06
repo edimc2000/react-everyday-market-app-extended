@@ -15,16 +15,38 @@ export class CartDisplay {
     }
 
     static CartEmptyMessage = (): JSX.Element => {
-
         return (
-            
-                <div className="empty-cart">
-                    <span className="empty-cart-title">Your cart is empty</span>
-                    <span className="empty-cart-message">Redirecting to home page in 2 seconds...</span>
-                </div>
-            
+
+            <div className="empty-cart">
+                <span className="empty-cart-title">Your cart is empty</span>
+                <span className="empty-cart-message">Redirecting to home page in 2 seconds...</span>
+            </div>
+
         )
 
 
+
+
+
     }
+
 }
+
+
+export interface ICartContents {
+    id: number
+    cartCounter: number
+    setCartCounter: (value: number | ((prev: number) => number)) => void
+    cartItems: ICartItem[]
+    setCartItems: (value: ICartItem[] | ((prev: ICartItem[]) => ICartItem[])) => void
+}
+
+
+
+
+//      static DeleteCartItem = (id: number) => {
+//     const itemToRemove = cartItems.find(item => item.id === id)
+//     const quantityToRemove = itemToRemove?.quantity ?? 0
+//     setCartItems(prev => prev.filter(item => item.id !== id))
+//     setCartCounter(prev => prev - quantityToRemove)
+// }

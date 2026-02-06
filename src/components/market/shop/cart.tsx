@@ -3,20 +3,22 @@ import { useEffect } from 'react'
 import { type ICartItem, generateUPC } from '../models/merchandise'
 import { Icons } from '../../../helpers/helper'
 import { CartDisplay } from '../../../helpers/static-components'
+
+import { type ICartContents } from '../../../helpers/static-components'
 import './cart.css'
 
-interface ICartContents {
-    id: number
-    cartCounter: number
-    setCartCounter: (value: number | ((prev: number) => number)) => void
-    cartItems: ICartItem[]
-    setCartItems: (value: ICartItem[] | ((prev: ICartItem[]) => ICartItem[])) => void
-}
+// interface ICartContents {
+//     id: number
+//     cartCounter: number
+//     setCartCounter: (value: number | ((prev: number) => number)) => void
+//     cartItems: ICartItem[]
+//     setCartItems: (value: ICartItem[] | ((prev: ICartItem[]) => ICartItem[])) => void
+// }
 
 function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICartContents) {
     const navigate = useNavigate()
 
-    //AI was used on this code to clear time out and re direct when empty 
+    //AI was used on this code block to clear timeout and re-direct when the cart is empty 
     useEffect(() => {
         if (cartCounter === 0) {
             const timer = setTimeout(() => {
@@ -34,13 +36,12 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
         )
     }
 
-    // function DeleteCartItem(id: number) {
-    const DeleteCartItem = (id: number)=> {
-        const itemToRemove = cartItems.find(item => item.id === id)
-        const quantityToRemove = itemToRemove?.quantity ?? 0
-        setCartItems(prev => prev.filter(item => item.id !== id))
-        setCartCounter(prev => prev - quantityToRemove)
-    }
+    // const DeleteCartItem = (id: number)=> {
+    //     const itemToRemove = cartItems.find(item => item.id === id)
+    //     const quantityToRemove = itemToRemove?.quantity ?? 0
+    //     setCartItems(prev => prev.filter(item => item.id !== id))
+    //     setCartCounter(prev => prev - quantityToRemove)
+    // }
 
     return (
         <>
@@ -73,7 +74,6 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
                                 </svg>
 
                             </div>
-
                         </div>
 
                         <div className='price-container cart-price'>
