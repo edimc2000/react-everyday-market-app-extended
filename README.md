@@ -114,6 +114,7 @@ npm run preview
 
 
 ## Components
+<details>
 
 ### Products Page
 - Main landing page displaying category menu
@@ -155,7 +156,10 @@ npm run preview
 - Cart counter badge (displays when cart has items)
 - Logo click navigates to home page
 
+</details>
+
 ## Helper Classes
+<details>
 
 ### ShopService
 - Async merchandise filtering with simulated 500ms API delay
@@ -171,12 +175,17 @@ npm run preview
 - SVG path constants for deleteIcon, shoppingCart, wishList
 - Centralized icon management for consistent UI
 
+</details>
+
 ## Utility Functions
 
+<details>
 ### generateUPC(id: number)
 - Creates consistent 15-digit UPC from merchandise ID
 - Uses Luhn checksum algorithm for validation
 - Returns formatted string with leading zeros
+
+</details>
 
 ## Data Models
 
