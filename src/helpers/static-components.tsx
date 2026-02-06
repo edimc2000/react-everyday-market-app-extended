@@ -1,4 +1,6 @@
 import type { JSX } from 'react'
+import { type ICartItem } from '../components/market/models/merchandise'
+
 
 export class CartDisplay {
     static CartHeader = (): JSX.Element => {
@@ -23,11 +25,13 @@ export class CartDisplay {
             </div>
 
         )
+    }
 
-
-
-
-
+    static DeleteCartItem = (id: number, cartItems: ICartItem[], setCartItems: (value: ICartItem[] | ((prev: ICartItem[]) => ICartItem[])) => void, setCartCounter: (value: number | ((prev: number) => number)) => void) => {
+        const itemToRemove = cartItems.find(item => item.id === id)
+        const quantityToRemove = itemToRemove?.quantity ?? 0
+        setCartItems(prev => prev.filter(item => item.id !== id))
+        setCartCounter(prev => prev - quantityToRemove)
     }
 
 }
@@ -44,9 +48,3 @@ export interface ICartContents {
 
 
 
-//      static DeleteCartItem = (id: number) => {
-//     const itemToRemove = cartItems.find(item => item.id === id)
-//     const quantityToRemove = itemToRemove?.quantity ?? 0
-//     setCartItems(prev => prev.filter(item => item.id !== id))
-//     setCartCounter(prev => prev - quantityToRemove)
-// }

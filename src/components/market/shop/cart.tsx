@@ -66,7 +66,8 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
                                 <span className="qtty">{item.quantity}</span>
                             </div>
 
-                            <div className='delete-container' onClick={() => DeleteCartItem(item.id)}>
+                            <div className='delete-container' onClick={() => CartDisplay.DeleteCartItem(item.id, cartItems, setCartItems, setCartCounter)}>
+                                
                                 <svg xmlns="http://www.w3.org"
                                     viewBox="0 0 24 24"
                                     className='svg-delete'>
