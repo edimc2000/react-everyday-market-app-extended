@@ -1,5 +1,4 @@
 import { useState } from "react"
-
 import { CategoryMenu } from "../category-menu/category-menu"
 import { FilteredBrands } from "../brands/brands"
 import './products-page.css'
@@ -24,7 +23,6 @@ const ProductsPage = () => {
         setAllCollapsed(true)
         setSelectedCategory(categoryName)
     }
-
 
     return (
         <div className="main-container">
