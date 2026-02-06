@@ -66,7 +66,7 @@ function ViewCart({ cartCounter, cartItems }: ICartContents) {
                         </div>
 
                         <div className="order-details-container">
-                            <span className="brand">{item.brandName} | </span>
+                            <span className="brand">{item.brandName}  </span>
                             <span className="cart-description">{item.item}</span>
                             <span className="cart-long-description">{item.description}</span>
 

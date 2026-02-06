@@ -34,7 +34,7 @@
 .qtty {
   border: solid lightgrey thin;
   border-radius: 5px;
-  margin: 6rem 0 0 1rem; 
+  margin: 6rem 0 0 1rem;
   padding: 0.5rem;
 }
 
@@ -43,22 +43,31 @@
 }
 
 .order-details-container {
-  margin-top: 3rem;
+  margin-top: 1rem;
   font-family: 'Open Sans', sans-serif !important;
   width: 60%;
 }
 
 .brand {
-  color: rgb(55, 0, 255);
+  color: rgba(0, 0, 255, 1);
   padding-right: 1rem;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+
 }
 
 .cart-description {
+  margin-top: 0.5rem;
+  display: block;
   padding-right: 1rem;
 }
 
 .cart-long-description {
+  font-family: 'PT Sans Narrow', sans-serif;
   display: block;
+  font-weight: 100;
+  font-size: 1.1rem;
 }
 
 .cart-price {
