@@ -33,18 +33,25 @@
 
 .delete-container {
   position: relative;
-  top: -8px;
+  top: -3px;
   left: 105px;
   border: none;
 }
 
 .svg-delete {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1rem;
+  height: 1rem;
   fill: white;
-  background-color: red;
+  background-color: gray;
   padding: 0.2rem;
   border-radius: 0.25rem;
+}
+
+.svg-delete:hover {
+  background-color: red;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: width 0.5s, height 0.5s;
 }
 
 .qtty-container-text {
@@ -97,6 +104,10 @@
   flex: 0 0 15% !important;
 }
 
+.unit-price{
+  color: lightgrey !important; 
+}
+
 .cart-upc {
   position: relative;
   width: fit-content;
@@ -120,6 +131,7 @@
 .empty-cart-title {
   display: block;
 }
+
 .empty-cart-message {
   display: block;
   font-size: 1.5rem;

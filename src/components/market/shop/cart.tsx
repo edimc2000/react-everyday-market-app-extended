@@ -97,9 +97,9 @@ const ViewCart = (
                         </div>
 
                         <div className='price-container cart-price'>
-                            <span className='price1'>$</span>
-                            <span className='price2'>{item.price.toFixed(0)}</span>
-                            <span className='price1'>.{item.price.toFixed(2).split('.')[1]}</span>
+                            <span className='price1 unit-price'>$</span>
+                            <span className='price2 unit-price'>{item.price.toFixed(0)}</span>
+                            <span className='price1 unit-price'>.{item.price.toFixed(2).split('.')[1]}</span>
                         </div>
 
                         <div className='price-container cart-price'>
