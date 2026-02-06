@@ -70,7 +70,7 @@
 }
 
 .brand {
-  color: rgba(0, 0, 255, 1);
+  color: rgba(0, 0, 0, 0.5);
   margin-left: 1rem;
 
   font-size: 1.1rem;

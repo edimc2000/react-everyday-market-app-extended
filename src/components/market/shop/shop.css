@@ -84,10 +84,12 @@
 }
 
 .merch-price-container {
+  position: relative;
+  top:-20px; 
   display: flex;
   width: 100%;
   align-items: flex-start; /* Top alignment for the entire row */
-  margin: 8px 0;
+  margin: 1px 0;
   padding-left: 2rem;
 }
 
@@ -120,7 +122,7 @@
   text-overflow: ellipsis;
   font-weight: bolder;
   padding-right: 8px; /* Add spacing between brand and price */
-    padding-left: 2rem;
+  padding-left: 2rem;
 }
 
 .merch-longdesc {
@@ -132,7 +134,7 @@
   display: block;
   padding-top: 0.2rem;
   color: rgb(80, 78, 78);
-    padding-left: 2rem;
+  padding-left: 2rem;
 }
 
 .upc-container {
@@ -142,11 +144,15 @@
   left: 25px;
   padding: 0.5rem;
   border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255, 0.75);
+  border: white solid thin;
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.11);
 }
 
+.upc {
+  color: #a30f0f;
+}
 
-.merch-image{
-padding-left: 0.85rem;
-
+.merch-image {
+  padding-left: 0.85rem;
 }

@@ -1,11 +1,25 @@
 import { useSearchParams } from 'react-router-dom'
-import { useState, useEffect } from "react"
+import { useState, useEffect, type JSX } from "react"
 
 import { type IMerchandise, type ICartItem, generateUPC } from '../models/merchandise'
 import { type IShopProps, ShopService } from '../../../helpers/shop-service'
 import './shop.css'
 
-const Shop = ({ cartCounter, setCartCounter, cartItems, setCartItems }: IShopProps) => {
+
+/**
+ * Shop Component Documentation
+ * This renders merchandise grid filtered by URL parameters (cat, brand)
+ * 
+ * @component
+ * @param {IShopProps} props - Cart state and setters
+ * @returns {JSX.Element} Product grid with add-to-cart capability
+ * 
+ * @example
+ * <Shop cartCounter={cartCounter} setCartCounter={setCartCounter} ... />
+ */
+
+const Shop = (
+    { cartCounter, setCartCounter, cartItems, setCartItems }: IShopProps): JSX.Element => {
 
     const [availableMerch, setAvailableMerch] = useState<IMerchandise[]>([])
     const [searchParams] = useSearchParams()
@@ -47,6 +61,8 @@ const Shop = ({ cartCounter, setCartCounter, cartItems, setCartItems }: IShopPro
         setCartCounter(prev => prev + 1)
     }
 
+
+
     if (loading) {
         return (
             <div className='loader-container'>
@@ -64,7 +80,7 @@ const Shop = ({ cartCounter, setCartCounter, cartItems, setCartItems }: IShopPro
                         <img className="category-image merch-image" src={merch.imageUrl} />
 
                         <div className='upc-container' >
-                            UPC {generateUPC(merch.id)}
+                            <span className="upc" >UPC {generateUPC(merch.id)}</span>
                         </div>
 
                         <div className='merch-price-container '>

@@ -397,7 +397,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Breathable graphite sports tee with soft-touch finish',
     price: 49.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/1.webp'
+    imageUrl: '/assets/images/shop/37.webp'
   },
   {
     id: 38,
@@ -407,7 +407,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Lightweight tech knit crew with stretch comfort',
     price: 62.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/2.webp'
+    imageUrl: '/assets/images/shop/38.webp'
   },
   {
     id: 39,
@@ -417,7 +417,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Classic training tee with moisture control',
     price: 45.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/3.webp'
+    imageUrl: '/assets/images/shop/39.webp'
   },
   {
     id: 40,
@@ -427,7 +427,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Relaxed track top with ribbed cuffs',
     price: 88.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/4.webp'
+    imageUrl: '/assets/images/shop/40.webp'
   },
   {
     id: 41,
@@ -437,7 +437,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Soft long sleeve tee with minimal Vans branding',
     price: 52.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/5.webp'
+    imageUrl: '/assets/images/shop/41.webp'
   },
   {
     id: 42,
@@ -447,7 +447,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Textured corduroy overshirt with button front',
     price: 74.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/6.webp'
+    imageUrl: '/assets/images/shop/42.webp'
   },
   {
     id: 43,
@@ -457,7 +457,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Durable canvas work shirt with chest pockets',
     price: 79.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/7.webp'
+    imageUrl: '/assets/images/shop/43.webp'
   },
   {
     id: 44,
@@ -467,7 +467,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Cotton pocket tee with tonal logo',
     price: 42.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/8.webp'
+    imageUrl: '/assets/images/shop/44.webp'
   },
   {
     id: 45,
@@ -477,7 +477,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Airy linen shirt with relaxed silhouette',
     price: 90.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/9.webp'
+    imageUrl: '/assets/images/shop/45.webp'
   },
   {
     id: 46,
@@ -487,7 +487,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Jersey henley with three-button placket',
     price: 48.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/10.webp'
+    imageUrl: '/assets/images/shop/46.webp'
   },
   {
     id: 47,
@@ -497,7 +497,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Brushed fleece sweatshirt for everyday comfort',
     price: 72.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/11.webp'
+    imageUrl: '/assets/images/shop/47.webp'
   },
 
   // Women items (additional)
@@ -509,7 +509,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Lightweight tank with sweat-wicking fabric',
     price: 36.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/12.webp'
+    imageUrl: '/assets/images/shop/48.webp'
   },
   {
     id: 49,
@@ -519,7 +519,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Cozy knit pullover with relaxed fit',
     price: 68.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/13.webp'
+    imageUrl: '/assets/images/shop/49.webp'
   },
   {
     id: 50,
@@ -539,7 +539,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Light running layer with thumbholes',
     price: 54.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/15.webp'
+    imageUrl: '/assets/images/shop/51.webp'
   },
   {
     id: 52,
@@ -549,7 +549,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Soft hoodie with roomy hood and kangaroo pocket',
     price: 78.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/16.webp'
+    imageUrl: '/assets/images/shop/52.webp'
   },
   {
     id: 53,
@@ -641,7 +641,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Soft playday tee with stretch comfort',
     price: 28.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/25.webp'
+    imageUrl: '/assets/images/shop/61.webp'
   },
   {
     id: 62,
@@ -651,7 +651,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Warm hoodie for school and play',
     price: 42.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/26.webp'
+    imageUrl: '/assets/images/shop/62.webp'
   },
   {
     id: 63,
@@ -661,7 +661,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Matching tee and shorts set for active kids',
     price: 36.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/27.webp'
+    imageUrl: '/assets/images/shop/63.webp'
   },
   {
     id: 64,
@@ -671,7 +671,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Logo tee with soft cotton feel',
     price: 26.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/28.webp'
+    imageUrl: '/assets/images/shop/64.webp'
   },
   {
     id: 65,
@@ -681,7 +681,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Cozy crew sweatshirt for cool days',
     price: 38.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/29.webp'
+    imageUrl: '/assets/images/shop/65.webp'
   },
   {
     id: 66,
@@ -691,7 +691,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Color block hoodie with kangaroo pocket',
     price: 44.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/30.webp'
+    imageUrl: '/assets/images/shop/66.webp'
   },
   {
     id: 67,
@@ -701,7 +701,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Quick-dry tech tee for practice',
     price: 32.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/31.webp'
+    imageUrl: '/assets/images/shop/67.webp'
   },
   {
     id: 68,
@@ -711,7 +711,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Light performance hoodie for warmups',
     price: 48.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/32.webp'
+    imageUrl: '/assets/images/shop/68.webp'
   },
   {
     id: 69,
@@ -771,7 +771,7 @@ export const merchandiseItems: IMerchandise[] = [
     description: 'Warmup hoodie with front pocket',
     price: 44.00,
     discount: 10,
-    imageUrl: '/assets/images/shop/2.webp'
+    imageUrl: '/assets/images/shop/74.webp'
   },
   {
     id: 75,

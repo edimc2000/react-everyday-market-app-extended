@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, type JSX } from 'react'
 
 import { generateUPC } from '../models/merchandise'
 import { Icons } from '../../../helpers/display-helper'
@@ -9,7 +9,7 @@ import './cart.css'
 
 
 /**
- * ViewCart Component Documentation - AI Assisted Documentation
+ * ViewCart Component - AI Assisted Documentation
  * 
  * This component renders the shopping cart page with item display, 
  * quantity management, and automatic empty cart handling.
@@ -31,7 +31,9 @@ import './cart.css'
  * />
  */
 
-const ViewCart = ({ cartCounter, setCartCounter, cartItems, setCartItems }: ICartContents) =>{
+const ViewCart = (
+    { cartCounter, setCartCounter, cartItems, setCartItems }: ICartContents): JSX.Element => {
+
     const navigate = useNavigate()
 
     //AI was used on this code block to clear timeout and re-direct when the cart is empty 
