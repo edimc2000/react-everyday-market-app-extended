@@ -303,6 +303,7 @@ interface HeaderProps {
 
 ### Service Interfaces
 <details>
+
 #### IShopService
 Shop service filtering operations
 ```typescript
