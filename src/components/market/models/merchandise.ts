@@ -386,19 +386,719 @@ export const merchandiseItems: IMerchandise[] = [
     price: 95.00,
     discount: 10,
     imageUrl: '/assets/images/shop/36.webp'
+  },
+
+  // Men items (additional)
+  {
+    id: 37,
+    brandName: 'Nike',
+    type: 'men',
+    item: 'Graphite Sports Tee',
+    description: 'Breathable graphite sports tee with soft-touch finish',
+    price: 49.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/1.webp'
+  },
+  {
+    id: 38,
+    brandName: 'Nike',
+    type: 'men',
+    item: 'Tech Knit Crew',
+    description: 'Lightweight tech knit crew with stretch comfort',
+    price: 62.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/2.webp'
+  },
+  {
+    id: 39,
+    brandName: 'Adidas',
+    type: 'men',
+    item: 'Essentials Training Tee',
+    description: 'Classic training tee with moisture control',
+    price: 45.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/3.webp'
+  },
+  {
+    id: 40,
+    brandName: 'Adidas',
+    type: 'men',
+    item: 'Urban Track Top',
+    description: 'Relaxed track top with ribbed cuffs',
+    price: 88.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/4.webp'
+  },
+  {
+    id: 41,
+    brandName: 'Vans',
+    type: 'men',
+    item: 'Skate Long Sleeve',
+    description: 'Soft long sleeve tee with minimal Vans branding',
+    price: 52.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/5.webp'
+  },
+  {
+    id: 42,
+    brandName: 'Vans',
+    type: 'men',
+    item: 'Corduroy Overshirt',
+    description: 'Textured corduroy overshirt with button front',
+    price: 74.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/6.webp'
+  },
+  {
+    id: 43,
+    brandName: 'Vans',
+    type: 'men',
+    item: 'Canvas Work Shirt',
+    description: 'Durable canvas work shirt with chest pockets',
+    price: 79.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/7.webp'
+  },
+  {
+    id: 44,
+    brandName: 'Converse',
+    type: 'men',
+    item: 'Logo Pocket Tee',
+    description: 'Cotton pocket tee with tonal logo',
+    price: 42.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/8.webp'
+  },
+  {
+    id: 45,
+    brandName: 'Birkenstock',
+    type: 'men',
+    item: 'Relaxed Linen Shirt',
+    description: 'Airy linen shirt with relaxed silhouette',
+    price: 90.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/9.webp'
+  },
+  {
+    id: 46,
+    brandName: 'Birkenstock',
+    type: 'men',
+    item: 'Soft Jersey Henley',
+    description: 'Jersey henley with three-button placket',
+    price: 48.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/10.webp'
+  },
+  {
+    id: 47,
+    brandName: 'Birkenstock',
+    type: 'men',
+    item: 'Coastal Sweatshirt',
+    description: 'Brushed fleece sweatshirt for everyday comfort',
+    price: 72.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/11.webp'
+  },
+
+  // Women items (additional)
+  {
+    id: 48,
+    brandName: 'Nike',
+    type: 'women',
+    item: 'Dri-FIT Tank',
+    description: 'Lightweight tank with sweat-wicking fabric',
+    price: 36.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/12.webp'
+  },
+  {
+    id: 49,
+    brandName: 'Nike',
+    type: 'women',
+    item: 'Soft Knit Pullover',
+    description: 'Cozy knit pullover with relaxed fit',
+    price: 68.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/13.webp'
+  },
+  {
+    id: 50,
+    brandName: 'Adidas',
+    type: 'women',
+    item: 'Studio Crop Tee',
+    description: 'Cropped tee with breathable panels',
+    price: 39.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/14.webp'
+  },
+  {
+    id: 51,
+    brandName: 'Adidas',
+    type: 'women',
+    item: 'Run Layer Top',
+    description: 'Light running layer with thumbholes',
+    price: 54.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/15.webp'
+  },
+  {
+    id: 52,
+    brandName: 'Adidas',
+    type: 'women',
+    item: 'Weekend Hoodie',
+    description: 'Soft hoodie with roomy hood and kangaroo pocket',
+    price: 78.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/16.webp'
+  },
+  {
+    id: 53,
+    brandName: 'Vans',
+    type: 'women',
+    item: 'Skate Graphic Tee',
+    description: 'Classic tee with seasonal graphic print',
+    price: 38.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/17.webp'
+  },
+  {
+    id: 54,
+    brandName: 'Vans',
+    type: 'women',
+    item: 'Oversized Crew',
+    description: 'Oversized crewneck with soft fleece interior',
+    price: 64.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/18.webp'
+  },
+  {
+    id: 55,
+    brandName: 'Converse',
+    type: 'women',
+    item: 'Essential Long Sleeve',
+    description: 'Lightweight long sleeve with embroidered logo',
+    price: 46.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/19.webp'
+  },
+  {
+    id: 56,
+    brandName: 'Converse',
+    type: 'women',
+    item: 'Classic Hoodie',
+    description: 'Everyday hoodie with soft fleece lining',
+    price: 72.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/20.webp'
+  },
+  {
+    id: 57,
+    brandName: 'Puma',
+    type: 'women',
+    item: 'Studio Tee',
+    description: 'Studio-ready tee with stretch fabric',
+    price: 40.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/21.webp'
+  },
+  {
+    id: 58,
+    brandName: 'Puma',
+    type: 'women',
+    item: 'Training Tank',
+    description: 'Mesh-backed training tank for airflow',
+    price: 34.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/22.webp'
+  },
+  {
+    id: 59,
+    brandName: 'Puma',
+    type: 'women',
+    item: 'Everyday Crew',
+    description: 'Soft everyday crew with ribbed hem',
+    price: 58.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/23.webp'
+  },
+  {
+    id: 60,
+    brandName: 'Puma',
+    type: 'women',
+    item: 'Cozy Zip Hoodie',
+    description: 'Zip hoodie with brushed fleece interior',
+    price: 80.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/24.webp'
+  },
+
+  // Kids items (additional)
+  {
+    id: 61,
+    brandName: 'Adidas',
+    type: 'kids',
+    item: 'Playday Tee',
+    description: 'Soft playday tee with stretch comfort',
+    price: 28.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/25.webp'
+  },
+  {
+    id: 62,
+    brandName: 'Adidas',
+    type: 'kids',
+    item: 'Weekend Hoodie',
+    description: 'Warm hoodie for school and play',
+    price: 42.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/26.webp'
+  },
+  {
+    id: 63,
+    brandName: 'Adidas',
+    type: 'kids',
+    item: 'Active Shorts Set',
+    description: 'Matching tee and shorts set for active kids',
+    price: 36.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/27.webp'
+  },
+  {
+    id: 64,
+    brandName: 'Vans',
+    type: 'kids',
+    item: 'Skate Logo Tee',
+    description: 'Logo tee with soft cotton feel',
+    price: 26.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/28.webp'
+  },
+  {
+    id: 65,
+    brandName: 'Vans',
+    type: 'kids',
+    item: 'Mini Crew Sweatshirt',
+    description: 'Cozy crew sweatshirt for cool days',
+    price: 38.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/29.webp'
+  },
+  {
+    id: 66,
+    brandName: 'Vans',
+    type: 'kids',
+    item: 'Color Block Hoodie',
+    description: 'Color block hoodie with kangaroo pocket',
+    price: 44.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/30.webp'
+  },
+  {
+    id: 67,
+    brandName: 'Under Armour',
+    type: 'kids',
+    item: 'Sport Tech Tee',
+    description: 'Quick-dry tech tee for practice',
+    price: 32.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/31.webp'
+  },
+  {
+    id: 68,
+    brandName: 'Under Armour',
+    type: 'kids',
+    item: 'Performance Hoodie',
+    description: 'Light performance hoodie for warmups',
+    price: 48.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/32.webp'
+  },
+  {
+    id: 69,
+    brandName: 'Puma',
+    type: 'kids',
+    item: 'Playtime Tee',
+    description: 'Everyday tee with playful graphic',
+    price: 24.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/33.webp'
+  },
+  {
+    id: 70,
+    brandName: 'Puma',
+    type: 'kids',
+    item: 'Track Jacket',
+    description: 'Light track jacket with zip front',
+    price: 46.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/34.webp'
+  },
+  {
+    id: 71,
+    brandName: 'Puma',
+    type: 'kids',
+    item: 'Fleece Joggers',
+    description: 'Soft fleece joggers for all-day comfort',
+    price: 34.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/35.webp'
+  },
+  {
+    id: 72,
+    brandName: 'Puma',
+    type: 'kids',
+    item: 'Sporty Hoodie',
+    description: 'Sporty hoodie with warm lining',
+    price: 42.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/36.webp'
+  },
+  {
+    id: 73,
+    brandName: 'Nike',
+    type: 'kids',
+    item: 'Youth Training Tee',
+    description: 'Training tee with soft jersey feel',
+    price: 26.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/1.webp'
+  },
+  {
+    id: 74,
+    brandName: 'Nike',
+    type: 'kids',
+    item: 'Kids Warmup Hoodie',
+    description: 'Warmup hoodie with front pocket',
+    price: 44.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/2.webp'
+  },
+  {
+    id: 75,
+    brandName: 'Nike',
+    type: 'kids',
+    item: 'Play Shorts Set',
+    description: 'Matching set with breathable shorts',
+    price: 32.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/3.webp'
+  },
+  {
+    id: 76,
+    brandName: 'Nike',
+    type: 'kids',
+    item: 'Active Long Sleeve',
+    description: 'Long sleeve top for cooler days',
+    price: 30.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/4.webp'
+  },
+
+  // Sports items (additional)
+  {
+    id: 77,
+    brandName: 'Nike',
+    type: 'sports',
+    item: 'Pro Training Tee',
+    description: 'Compression training tee with sweat control',
+    price: 65.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/5.webp'
+  },
+  {
+    id: 78,
+    brandName: 'Nike',
+    type: 'sports',
+    item: 'Ventilated Jersey',
+    description: 'Ventilated jersey with lightweight mesh',
+    price: 72.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/6.webp'
+  },
+  {
+    id: 79,
+    brandName: 'Nike',
+    type: 'sports',
+    item: 'Performance Quarter-Zip',
+    description: 'Quarter-zip layer for training sessions',
+    price: 88.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/7.webp'
+  },
+  {
+    id: 80,
+    brandName: 'Adidas',
+    type: 'sports',
+    item: 'Match Day Tee',
+    description: 'Match-day tee with quick-dry fabric',
+    price: 60.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/8.webp'
+  },
+  {
+    id: 81,
+    brandName: 'Adidas',
+    type: 'sports',
+    item: 'Training Layer',
+    description: 'Stretch training layer for mobility',
+    price: 74.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/9.webp'
+  },
+  {
+    id: 82,
+    brandName: 'Adidas',
+    type: 'sports',
+    item: 'Stadium Hoodie',
+    description: 'Warm stadium hoodie with fleece lining',
+    price: 86.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/10.webp'
+  },
+  {
+    id: 83,
+    brandName: 'Under Armour',
+    type: 'sports',
+    item: 'Core Training Hoodie',
+    description: 'Core hoodie for training and recovery',
+    price: 84.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/11.webp'
+  },
+  {
+    id: 84,
+    brandName: 'New Balance',
+    type: 'sports',
+    item: 'NB Sport Tee',
+    description: 'Light sport tee with NB DRY finish',
+    price: 58.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/12.webp'
+  },
+  {
+    id: 85,
+    brandName: 'New Balance',
+    type: 'sports',
+    item: 'Endurance Long Sleeve',
+    description: 'Long sleeve with reflective details',
+    price: 70.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/13.webp'
+  },
+  {
+    id: 86,
+    brandName: 'New Balance',
+    type: 'sports',
+    item: 'Training Crew',
+    description: 'Soft training crew with ribbed cuffs',
+    price: 64.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/14.webp'
+  },
+  {
+    id: 87,
+    brandName: 'New Balance',
+    type: 'sports',
+    item: 'Speed Zip Layer',
+    description: 'Zip layer for warmups and cool-downs',
+    price: 82.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/15.webp'
+  },
+  {
+    id: 88,
+    brandName: 'Puma',
+    type: 'sports',
+    item: 'Active Mesh Tee',
+    description: 'Mesh tee with lightweight ventilation',
+    price: 52.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/16.webp'
+  },
+  {
+    id: 89,
+    brandName: 'Puma',
+    type: 'sports',
+    item: 'Sprint Jersey',
+    description: 'Sprint jersey built for speed and comfort',
+    price: 66.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/17.webp'
+  },
+  {
+    id: 90,
+    brandName: 'Puma',
+    type: 'sports',
+    item: 'Training Hoodie',
+    description: 'Warm training hoodie with drawcord hood',
+    price: 78.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/18.webp'
+  },
+  {
+    id: 91,
+    brandName: 'Puma',
+    type: 'sports',
+    item: 'Lightweight Warmup',
+    description: 'Lightweight warmup top with stretch',
+    price: 72.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/19.webp'
+  },
+
+  // Sleepwear items (additional)
+  {
+    id: 92,
+    brandName: 'Furla',
+    type: 'sleepwear',
+    item: 'Silk Sleep Shorts',
+    description: 'Silky sleep shorts with elastic waistband',
+    price: 58.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/20.webp'
+  },
+  {
+    id: 93,
+    brandName: 'Furla',
+    type: 'sleepwear',
+    item: 'Satin Camisole',
+    description: 'Satin camisole with delicate straps',
+    price: 62.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/21.webp'
+  },
+  {
+    id: 94,
+    brandName: 'Prada',
+    type: 'sleepwear',
+    item: 'Soft Sleep Pants',
+    description: 'Soft sleep pants with relaxed fit',
+    price: 78.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/22.webp'
+  },
+  {
+    id: 95,
+    brandName: 'Prada',
+    type: 'sleepwear',
+    item: 'Evening Lounge Top',
+    description: 'Elegant lounge top with smooth drape',
+    price: 92.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/23.webp'
+  },
+  {
+    id: 96,
+    brandName: 'Kate Spade',
+    type: 'sleepwear',
+    item: 'Soft Sleep Tee',
+    description: 'Light sleep tee with playful trim',
+    price: 48.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/24.webp'
+  },
+  {
+    id: 97,
+    brandName: 'Kate Spade',
+    type: 'sleepwear',
+    item: 'Cozy Lounge Pants',
+    description: 'Cozy lounge pants with drawstring waist',
+    price: 60.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/25.webp'
+  },
+  {
+    id: 98,
+    brandName: 'Calvin Klein',
+    type: 'sleepwear',
+    item: 'Cotton Sleep Set',
+    description: 'Breathable cotton sleep set with relaxed fit',
+    price: 70.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/26.webp'
+  },
+  {
+    id: 99,
+    brandName: 'Calvin Klein',
+    type: 'sleepwear',
+    item: 'Ribbed Sleep Tank',
+    description: 'Ribbed tank with soft stretch',
+    price: 38.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/27.webp'
+  },
+  {
+    id: 100,
+    brandName: 'Calvin Klein',
+    type: 'sleepwear',
+    item: 'Lounge Shorts',
+    description: 'Light lounge shorts with elastic waistband',
+    price: 34.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/28.webp'
+  },
+  {
+    id: 101,
+    brandName: 'Calvin Klein',
+    type: 'sleepwear',
+    item: 'Sleep Robe',
+    description: 'Soft robe with tie belt and side pockets',
+    price: 82.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/29.webp'
+  },
+  {
+    id: 102,
+    brandName: "Victoria's Secret",
+    type: 'sleepwear',
+    item: 'Satin Pajama Set',
+    description: 'Satin pajama set with button-up top',
+    price: 88.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/30.webp'
+  },
+  {
+    id: 103,
+    brandName: "Victoria's Secret",
+    type: 'sleepwear',
+    item: 'Lace Trim Camisole',
+    description: 'Camisole with lace trim and soft drape',
+    price: 46.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/31.webp'
+  },
+  {
+    id: 104,
+    brandName: "Victoria's Secret",
+    type: 'sleepwear',
+    item: 'Modal Sleep Pants',
+    description: 'Modal sleep pants with smooth hand feel',
+    price: 62.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/32.webp'
+  },
+  {
+    id: 105,
+    brandName: "Victoria's Secret",
+    type: 'sleepwear',
+    item: 'Soft Lounge Robe',
+    description: 'Soft lounge robe for cozy nights',
+    price: 78.00,
+    discount: 10,
+    imageUrl: '/assets/images/shop/33.webp'
   }
 ]
 
 export function getMerchandiseByBrand(brandName: string): IMerchandise[] {
-  return merchandiseItems.filter(item => item.brandName === brandName)
+  return merchandiseItems.filter(item => item.brandName.toLowerCase() === brandName.toLowerCase())
 }
 
 export function getMerchandiseByType(type: string): IMerchandise[] {
-  return merchandiseItems.filter(item => item.type === type)
+  return merchandiseItems.filter(item => item.type.toLowerCase() === type.toLowerCase())
 }
 
 export function getMerchandiseByBrandAndType(brandName: string, type: string): IMerchandise[] {
   return merchandiseItems.filter(item => 
-    item.brandName === brandName && item.type === type
+    item.brandName.toLowerCase() === brandName.toLowerCase() && item.type.toLowerCase() === type.toLowerCase()
   )
 }
