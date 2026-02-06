@@ -2,7 +2,7 @@ import { type IMerchandise, type ICartItem, generateUPC } from '../models/mercha
 import './shop.css'
 import { useSearchParams } from 'react-router-dom'
 import { useState, useEffect } from "react"
-import { ShopService } from '../models/shopService'
+import { ShopService } from '../../../helpers/shop-helper'
 
 interface ShopProps {
     cartCounter: number

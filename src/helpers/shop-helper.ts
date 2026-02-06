@@ -1,4 +1,5 @@
-import { merchandiseItems, type IMerchandise , getMerchandiseByBrandAndType} from '../models/merchandise'
+import { type IMerchandise, getMerchandiseByBrandAndType } from '../components/market/models/merchandise'
+
 
 interface IShopService {
     getFilteredMerch(cat: string, brand: string): Promise<IMerchandise[]>
@@ -16,4 +17,14 @@ class ShopService implements IShopService {
     }
 }
 
-export { ShopService, type IShopService }
+
+ class ShopDisplay { 
+
+// static display
+
+ }
+
+
+export { ShopService, type IShopService, ShopDisplay}
+
+

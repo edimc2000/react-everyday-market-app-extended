@@ -14,7 +14,7 @@ export class CartDisplay {
     * @static
     * @returns {JSX.Element} Header component with price columns
     */
-    static CartHeader = (): JSX.Element => {
+    static renderCartHeader = (): JSX.Element => {
         return (
             <div className="order-container order-header">
                 <div className="image-container" />
@@ -30,7 +30,7 @@ export class CartDisplay {
     * @static
     * @returns {JSX.Element} Empty state component
     */
-    static CartEmptyMessage = (): JSX.Element => {
+    static renderCartEmptyMessage = (): JSX.Element => {
         return (
             <div className="empty-cart">
                 <span className="empty-cart-title">Your cart is empty</span>

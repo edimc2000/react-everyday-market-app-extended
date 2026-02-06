@@ -47,7 +47,7 @@ const ViewCart = ({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
     if (cartCounter === 0) {
         return (
             <div className='main-container'>
-                <CartDisplay.CartEmptyMessage />
+                <CartDisplay.renderCartEmptyMessage />
             </div>
         )
     }
@@ -63,7 +63,7 @@ const ViewCart = ({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
     return (
         <>
             <div className='main-container'>
-                <CartDisplay.CartHeader />
+                <CartDisplay.renderCartHeader />
 
                 {cartItems.map((item) => (
                     <div key={item.id} className="order-container">
