@@ -1,4 +1,4 @@
-import { type IMerchandise, type ICartItem } from '../models/merchandise'
+import { type IMerchandise, type ICartItem, generateUPC } from '../models/merchandise'
 import './shop.css'
 import { useSearchParams } from 'react-router-dom'
 import { useState, useEffect } from "react"
@@ -86,16 +86,18 @@ function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: ShopProp
     return (
 
         <>
-
-            {category}22 {brand}
-
             <div className="main-container">
 
                 {
                     availableMerch.map((merch) => (
                         <div key={merch.id} className="merch-container">
-                            <img className="category-image" src={merch.imageUrl} />
-                            {/* {console.log(merch.imageUrl)} */}
+                            <img className="category-image merch-image" src={merch.imageUrl} />
+                           
+                           <div className='upc-container' >
+                            UPC {generateUPC(merch.id)}
+                           </div>
+
+                            
                             <div className='merch-price-container '>
                                 <button className="add-to-cart" onClick={() => AddToCart(merch)}> Add to cart</button>
 

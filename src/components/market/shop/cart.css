@@ -5,6 +5,7 @@
   border: solid thin lightsteelblue;
   display: flex;
   border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(107, 107, 107, 0.3);
 }
 
 .order-header {
@@ -32,8 +33,9 @@
 
 .delete-container {
   position: relative;
-  top: 30px;
-  border: none; 
+  top: -8px;
+  left: 105px;
+  border: none;
 }
 
 .svg-delete {
@@ -42,7 +44,7 @@
   fill: white;
   background-color: red;
   padding: 0.2rem;
-  border-radius: 0.25rem; 
+  border-radius: 0.25rem;
 }
 
 .qtty-container-text {
@@ -58,6 +60,7 @@
 
 .image {
   width: 7.5rem;
+  border-radius: 5px;
 }
 
 .order-details-container {
@@ -68,14 +71,15 @@
 
 .brand {
   color: rgba(0, 0, 255, 1);
-  padding-right: 1rem;
+  margin-left: 1rem;
+
   font-size: 1.1rem;
   font-weight: bolder;
   text-transform: uppercase;
 }
 
 .cart-description {
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   display: block;
   padding-right: 1rem;
 }
@@ -85,9 +89,38 @@
   display: block;
   font-weight: 100;
   font-size: 1.1rem;
+  color: rgba(107, 107, 107, 0.9)
 }
 
 .cart-price {
   margin-top: 4rem;
   flex: 0 0 15% !important;
+}
+
+.cart-upc {
+  position: relative;
+  width: fit-content;
+  top: -2px;
+  left: -10px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: rgba(245, 245, 244, 1);
+  color: rgb(0, 0, 255);
+}
+
+.empty-cart {
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif !important;
+  text-align: center;
+  font-size: 2rem;
+  display: block;
+  color: gray;
+}
+
+.empty-cart-title {
+  display: block;
+}
+.empty-cart-message {
+  display: block;
+  font-size: 1.5rem;
 }

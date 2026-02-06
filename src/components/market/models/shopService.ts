@@ -9,10 +9,6 @@ class ShopService implements IShopService {
     getFilteredMerch(cat: string, brand: string): Promise<IMerchandise[]> {
         return new Promise((resolve) => {
             setTimeout(() => {
-                // const filtered = merchandiseItems.filter(
-                //     item => item.type.toLowerCase() === cat.toLowerCase() 
-                //         && item.brandName.toLowerCase() === brand.toLowerCase()
-                // )
                 const filtered = getMerchandiseByBrandAndType(brand, cat)
                 resolve(filtered)
             }, 500)
@@ -21,4 +17,3 @@ class ShopService implements IShopService {
 }
 
 export { ShopService, type IShopService }
-// export type { IShopService }

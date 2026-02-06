@@ -1,4 +1,4 @@
-import { type ICartItem } from '../models/merchandise'
+import { type ICartItem, generateUPC } from '../models/merchandise'
 import './cart.css'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
@@ -28,9 +28,11 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
 
     if (cartCounter === 0) {
         return (
-            <div style={{ textAlign: 'center', padding: '50px', fontSize: '18px' }}>
-                <h2>Your cart is empty</h2>
-                <p>Redirecting to home page in 2 seconds...</p>
+            <div className='main-container'>
+            <div className="empty-cart">
+                <span className="empty-cart-title">Your cart is empty</span>
+                <span className="empty-cart-message">Redirecting to home page in 2 seconds...</span>
+            </div>
             </div>
         )
     }
@@ -46,26 +48,19 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
     return (
 
         <>
-            <span>{cartCounter} x 111 --- { }</span>
             <div className='main-container'>
-
                 <div className="order-container order-header">
                     <div className="image-container"  >
                     </div>
-
                     <div className="order-details-container">
                     </div>
-
                     <div className='price-container cart-header'>
                         Unit Price
                     </div>
-
                     <div className='price-container cart-header'>
                         Sub-total
                     </div>
-
                 </div>
-
 
                 {cartItems.map((item) => (
                     <div key={item.id} className="order-container">
@@ -74,7 +69,9 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
                         </div>
 
                         <div className="order-details-container">
-                            <span className="brand">{item.brandName} {item.id} </span>
+                            <span className="cart-upc">UPC {generateUPC(item.id)} </span>
+                            <span className="brand">{item.brandName}</span>
+                            
                             <span className="cart-description">{item.item}</span>
                             <span className="cart-long-description">{item.description}</span>
 

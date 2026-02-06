@@ -1,5 +1,7 @@
 .merch-container {
-  flex: 0 0 calc(33.333% - 14px);
+  flex: 0 0 calc(30% - 14px);
+  margin: 0.25rem;
+  padding: 0.5rem;
 
   /* Initial state for animation */
   opacity: 0;
@@ -8,6 +10,11 @@
 
   /* Random delay for staggered animation */
   animation-delay: calc(var(--delay-index, 0) * 1s);
+
+  border: solid lightgray thin;
+  min-height: 650px !important;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(107, 107, 107, 0.3);
 }
 
 .loader-container {
@@ -81,6 +88,7 @@
   width: 100%;
   align-items: flex-start; /* Top alignment for the entire row */
   margin: 8px 0;
+  padding-left: 2rem;
 }
 
 .add-to-cart {
@@ -98,13 +106,11 @@
   font-size: 0.95rem;
 }
 
-.add-to-cart:hover{
-    background-color: rgb(2, 124, 67);
-    
-    color: white;
+.add-to-cart:hover {
+  background-color: rgb(2, 124, 67);
 
+  color: white;
 }
-
 
 .merch-brand {
   font-family: 'Open Sans', sans-serif !important;
@@ -114,6 +120,7 @@
   text-overflow: ellipsis;
   font-weight: bolder;
   padding-right: 8px; /* Add spacing between brand and price */
+    padding-left: 2rem;
 }
 
 .merch-longdesc {
@@ -125,4 +132,21 @@
   display: block;
   padding-top: 0.2rem;
   color: rgb(80, 78, 78);
+    padding-left: 2rem;
+}
+
+.upc-container {
+  position: relative;
+  width: fit-content;
+  top: -50px;
+  left: 25px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+
+.merch-image{
+padding-left: 0.85rem;
+
 }

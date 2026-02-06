@@ -1102,3 +1102,32 @@ export function getMerchandiseByBrandAndType(brandName: string, type: string): I
     item.brandName.toLowerCase() === brandName.toLowerCase() && item.type.toLowerCase() === type.toLowerCase()
   )
 }
+
+
+// this method was created with AI assistance (GitHub Co-Pilot)
+export function generateUPC(id: number): string {
+  // Generate a consistent 15-digit UPC from merchandise ID
+  // Format: prefix(1) + padded-id(8) + sequence(4) + checksum(2)
+  
+  const prefix = '5' // Start with 5 (common for retail)
+  const idPadded = String(id).padStart(8, '0') // Pad ID to 8 digits
+  const sequence = String(id * 37).padStart(4, '0').slice(-4) // Derive sequence from ID
+  
+  // Calculate Luhn checksum for last 2 digits
+  const baseNumber = prefix + idPadded + sequence
+  let sum = 0
+  
+  for (let i = 0; i < baseNumber.length; i++) {
+    let digit = parseInt(baseNumber[i])
+    if (i % 2 === 0) {
+      digit *= 2
+      if (digit > 9) digit -= 9
+    }
+    sum += digit
+  }
+  
+  const checkDigit1 = (10 - (sum % 10)) % 10
+  const checkDigit2 = (id % 10) // Use last digit of ID for second check
+  
+  return baseNumber + checkDigit1 + checkDigit2
+}
