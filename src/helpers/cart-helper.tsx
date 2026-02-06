@@ -22,8 +22,6 @@ export class CartDisplay {
             </div>
         )
     }
-
-
 }
 
 export interface ICartContents {
