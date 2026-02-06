@@ -1,17 +1,12 @@
-import { type IMerchandise, type ICartItem, generateUPC } from '../models/merchandise'
-import './shop.css'
 import { useSearchParams } from 'react-router-dom'
 import { useState, useEffect } from "react"
-import { ShopService } from '../../../helpers/shop-helper'
 
-interface ShopProps {
-    cartCounter: number
-    setCartCounter: (value: number | ((prev: number) => number)) => void
-    cartItems: ICartItem[]
-    setCartItems: (value: ICartItem[] | ((prev: ICartItem[]) => ICartItem[])) => void
-}
+import { type IMerchandise, type ICartItem, generateUPC } from '../models/merchandise'
+import { type IShopProps, ShopService } from '../../../helpers/shop-service'
+import './shop.css'
 
-function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: ShopProps) {
+
+function Shop({ cartCounter, setCartCounter, cartItems, setCartItems }: IShopProps) {
 
     const [availableMerch, setAvailableMerch] = useState<IMerchandise[]>([])
     const [searchParams, setSearchParams] = useSearchParams()
