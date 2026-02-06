@@ -1,19 +1,10 @@
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import { type ICartItem, generateUPC } from '../models/merchandise'
+
+import { generateUPC } from '../models/merchandise'
 import { Icons } from '../../../helpers/helper'
-import { CartDisplay } from '../../../helpers/static-components'
-
-import { type ICartContents } from '../../../helpers/static-components'
+import { CartDisplay , type ICartContents} from '../../../helpers/cart-helper'
 import './cart.css'
-
-// interface ICartContents {
-//     id: number
-//     cartCounter: number
-//     setCartCounter: (value: number | ((prev: number) => number)) => void
-//     cartItems: ICartItem[]
-//     setCartItems: (value: ICartItem[] | ((prev: ICartItem[]) => ICartItem[])) => void
-// }
 
 function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICartContents) {
     const navigate = useNavigate()
@@ -36,12 +27,14 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
         )
     }
 
-    // const DeleteCartItem = (id: number)=> {
-    //     const itemToRemove = cartItems.find(item => item.id === id)
-    //     const quantityToRemove = itemToRemove?.quantity ?? 0
-    //     setCartItems(prev => prev.filter(item => item.id !== id))
-    //     setCartCounter(prev => prev - quantityToRemove)
-    // }
+
+    const DeleteCartItem = (id: number)=> {
+        const itemToRemove = cartItems.find(item => item.id === id)
+        const quantityToRemove = itemToRemove?.quantity ?? 0
+        setCartItems(prev => prev.filter(item => item.id !== id))
+        setCartCounter(prev => prev - quantityToRemove)
+    }
+
 
     return (
         <>
@@ -66,14 +59,17 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
                                 <span className="qtty">{item.quantity}</span>
                             </div>
 
-                            <div className='delete-container' onClick={() => CartDisplay.DeleteCartItem(item.id, cartItems, setCartItems, setCartCounter)}>
-                                
+                            <div
+                                className='delete-container'
+                                    onClick={() => DeleteCartItem(item.id)}>
+
+
+
                                 <svg xmlns="http://www.w3.org"
                                     viewBox="0 0 24 24"
                                     className='svg-delete'>
                                     <path d={Icons.deleteIcon} />
                                 </svg>
-
                             </div>
                         </div>
 
@@ -89,18 +85,11 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
                             <span className='price1'>.{(item.price * item.quantity).toFixed(2).split('.')[1]}</span>
                         </div>
 
-
                     </div>
                 ))}
             </div>
         </>
     )
-
 }
-
-
-
-
-
 
 export { ViewCart }

@@ -1,8 +1,8 @@
 import type { JSX } from 'react'
 import { type ICartItem } from '../components/market/models/merchandise'
 
-
 export class CartDisplay {
+
     static CartHeader = (): JSX.Element => {
         return (
 
@@ -27,15 +27,8 @@ export class CartDisplay {
         )
     }
 
-    static DeleteCartItem = (id: number, cartItems: ICartItem[], setCartItems: (value: ICartItem[] | ((prev: ICartItem[]) => ICartItem[])) => void, setCartCounter: (value: number | ((prev: number) => number)) => void) => {
-        const itemToRemove = cartItems.find(item => item.id === id)
-        const quantityToRemove = itemToRemove?.quantity ?? 0
-        setCartItems(prev => prev.filter(item => item.id !== id))
-        setCartCounter(prev => prev - quantityToRemove)
-    }
 
 }
-
 
 export interface ICartContents {
     id: number
