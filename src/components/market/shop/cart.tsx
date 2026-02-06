@@ -3,10 +3,10 @@ import { useEffect } from 'react'
 
 import { generateUPC } from '../models/merchandise'
 import { Icons } from '../../../helpers/helper'
-import { CartDisplay , type ICartContents} from '../../../helpers/cart-helper'
+import { CartDisplay, type ICartContents } from '../../../helpers/cart-helper'
 import './cart.css'
 
-function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICartContents) {
+const ViewCart = ({ cartCounter, setCartCounter, cartItems, setCartItems }: ICartContents) =>{
     const navigate = useNavigate()
 
     //AI was used on this code block to clear timeout and re-direct when the cart is empty 
@@ -27,8 +27,7 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
         )
     }
 
-
-    const DeleteCartItem = (id: number)=> {
+    const DeleteCartItem = (id: number) => {
         const itemToRemove = cartItems.find(item => item.id === id)
         const quantityToRemove = itemToRemove?.quantity ?? 0
         setCartItems(prev => prev.filter(item => item.id !== id))
@@ -61,10 +60,7 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
 
                             <div
                                 className='delete-container'
-                                    onClick={() => DeleteCartItem(item.id)}>
-
-
-
+                                onClick={() => DeleteCartItem(item.id)}>
                                 <svg xmlns="http://www.w3.org"
                                     viewBox="0 0 24 24"
                                     className='svg-delete'>
