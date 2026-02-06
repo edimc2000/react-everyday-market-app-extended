@@ -15,15 +15,15 @@ import './shop.css'
  * @returns {JSX.Element} Product grid with add-to-cart capability
  * 
  * @example
- * <Shop cartCounter={cartCounter} setCartCounter={setCartCounter} ... />
+ * <Shop setCartCounter={setCartCounter} ... />
  */
 
 const Shop = (
-    { cartCounter, setCartCounter, cartItems, setCartItems }: IShopProps): JSX.Element => {
+    { setCartCounter, cartItems, setCartItems }: IShopProps): JSX.Element => {
 
     const [availableMerch, setAvailableMerch] = useState<IMerchandise[]>([])
     const [searchParams] = useSearchParams()
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
 
     // read params on the URL 
     const category = searchParams.get('cat')
@@ -31,8 +31,7 @@ const Shop = (
 
     useEffect(() => {
         if (category && brand) {
-            setLoading(true)
-            const shopService = new ShopService()
+              const shopService = new ShopService()
             shopService.getFilteredMerch(category, brand)
                 .then((merch) => {
                     setAvailableMerch(merch)
@@ -40,9 +39,7 @@ const Shop = (
                 .finally(() => {
                     setLoading(false)
                 })
-        } else {
-            setLoading(false)
-        }
+        } 
     }, [category, brand])
 
     const AddToCart = (item: ICartItem) => {

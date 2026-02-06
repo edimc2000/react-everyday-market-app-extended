@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import './App.css'
 import { ProductsPage } from './components/market/products-page/products-page'
