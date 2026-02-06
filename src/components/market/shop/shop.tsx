@@ -32,22 +32,6 @@ const Shop = ({ cartCounter, setCartCounter, cartItems, setCartItems }: IShopPro
         }
     }, [category, brand])
 
-
-
-
-    useEffect(() => {
-        if (cartCounter > 0) {
-            console.log(`cart counter after adding = ${cartCounter}`)
-
-
-            for (let index = 0; index < cartItems.length; index++) {
-                const element = cartItems[index]
-                console.log(`-----ELEMENT: ${element.description}-------`)
-
-            }
-        }
-    }, [cartCounter])
-
     const AddToCart = (item: ICartItem) => {
         console.log(`cart counter before adding = ${cartCounter}`)
         
