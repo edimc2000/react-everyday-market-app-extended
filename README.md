@@ -1,6 +1,4 @@
-_This README.md file was created with assistance from AI - GitHub Copilot. 
-The remaining code was developed without AI support, except where explicitly 
-indicated in the code comments._
+_This README.md file was created with assistance from AI - GitHub Copilot. The remaining codes were developed without AI support, except where explicitly indicated in the code comments._
 
 # Everyday Market App
 
