@@ -5,13 +5,15 @@ import { useEffect } from 'react'
 
 
 interface ICartContents {
+    id: number
     cartCounter: number
+    setCartCounter: (value: number | ((prev: number) => number)) => void
     cartItems: ICartItem[]
-
+    setCartItems: (value: ICartItem[] | ((prev: ICartItem[]) => ICartItem[])) => void
 }
 
 
-function ViewCart({ cartCounter, cartItems }: ICartContents) {
+function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICartContents) {
     const navigate = useNavigate()
 
     //AI was used on this code to clear time out and re direct when empty 
@@ -33,12 +35,18 @@ function ViewCart({ cartCounter, cartItems }: ICartContents) {
         )
     }
 
+    function DeleteItem(id: number) {
+        const itemToRemove = cartItems.find(item => item.id === id)
+        const quantityToRemove = itemToRemove?.quantity ?? 0
+
+        setCartItems(prev => prev.filter(item => item.id !== id))
+        setCartCounter(prev => prev - quantityToRemove)
+    }
+
     return (
 
         <>
-            <span>{cartCounter} x 111 </span>
-
-
+            <span>{cartCounter} x 111 --- { }</span>
             <div className='main-container'>
 
                 <div className="order-container order-header">
@@ -66,15 +74,25 @@ function ViewCart({ cartCounter, cartItems }: ICartContents) {
                         </div>
 
                         <div className="order-details-container">
-                            <span className="brand">{item.brandName}  </span>
+                            <span className="brand">{item.brandName} {item.id} </span>
                             <span className="cart-description">{item.item}</span>
                             <span className="cart-long-description">{item.description}</span>
 
-                        <div className='qtty-container '>
-                            <span className="qtty-container-text">Qtty:</span>
-                            <span className="qtty">{item.quantity}</span>
-                        
-                        </div>   
+                            <div className='qtty-container '>
+                                <span className="qtty-container-text">Qtty:</span>
+                                <span className="qtty">{item.quantity}</span>
+                            </div>
+
+                            <div className='delete-container '>
+                                <svg xmlns="http://www.w3.org"
+                                    viewBox="0 0 24 24"
+                                    onClick={() => DeleteItem(item.id)}
+                                    className='svg-delete'>
+                                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                </svg>
+
+                            </div>
+
                         </div>
 
                         <div className='price-container cart-price'>

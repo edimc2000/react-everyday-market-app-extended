@@ -4,6 +4,7 @@
   margin: 0 auto 1rem auto;
   border: solid thin lightsteelblue;
   display: flex;
+  border-radius: 10px;
 }
 
 .order-header {
@@ -24,13 +25,30 @@
   width: 15%;
 }
 
-.qtty-container-text {
-  font-family: 'Open Sans', sans-serif !important;
-}
 .qtty-container {
   position: relative;
   top: 20px;
 }
+
+.delete-container {
+  position: relative;
+  top: 30px;
+  border: none; 
+}
+
+.svg-delete {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: white;
+  background-color: red;
+  padding: 0.2rem;
+  border-radius: 0.25rem; 
+}
+
+.qtty-container-text {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
 .qtty {
   border: solid lightgrey thin;
   border-radius: 5px;
@@ -54,7 +72,6 @@
   font-size: 1.1rem;
   font-weight: bolder;
   text-transform: uppercase;
-
 }
 
 .cart-description {
