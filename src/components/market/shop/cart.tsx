@@ -1,8 +1,9 @@
-import { type ICartItem, generateUPC } from '../models/merchandise'
-import './cart.css'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
-
+import { type ICartItem, generateUPC } from '../models/merchandise'
+import { Icons } from '../../../helpers/helper'
+import { CartDisplay } from '../../../helpers/static-components'
+import './cart.css'
 
 interface ICartContents {
     id: number
@@ -11,7 +12,6 @@ interface ICartContents {
     cartItems: ICartItem[]
     setCartItems: (value: ICartItem[] | ((prev: ICartItem[]) => ICartItem[])) => void
 }
-
 
 function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICartContents) {
     const navigate = useNavigate()
@@ -29,38 +29,23 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
     if (cartCounter === 0) {
         return (
             <div className='main-container'>
-            <div className="empty-cart">
-                <span className="empty-cart-title">Your cart is empty</span>
-                <span className="empty-cart-message">Redirecting to home page in 2 seconds...</span>
-            </div>
+                <CartDisplay.CartEmptyMessage />
             </div>
         )
     }
 
-    function DeleteItem(id: number) {
+    // function DeleteCartItem(id: number) {
+    const DeleteCartItem = (id: number)=> {
         const itemToRemove = cartItems.find(item => item.id === id)
         const quantityToRemove = itemToRemove?.quantity ?? 0
-
         setCartItems(prev => prev.filter(item => item.id !== id))
         setCartCounter(prev => prev - quantityToRemove)
     }
 
     return (
-
         <>
             <div className='main-container'>
-                <div className="order-container order-header">
-                    <div className="image-container"  >
-                    </div>
-                    <div className="order-details-container">
-                    </div>
-                    <div className='price-container cart-header'>
-                        Unit Price
-                    </div>
-                    <div className='price-container cart-header'>
-                        Sub-total
-                    </div>
-                </div>
+                <CartDisplay.CartHeader />
 
                 {cartItems.map((item) => (
                     <div key={item.id} className="order-container">
@@ -71,7 +56,7 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
                         <div className="order-details-container">
                             <span className="cart-upc">UPC {generateUPC(item.id)} </span>
                             <span className="brand">{item.brandName}</span>
-                            
+
                             <span className="cart-description">{item.item}</span>
                             <span className="cart-long-description">{item.description}</span>
 
@@ -80,12 +65,11 @@ function ViewCart({ cartCounter, setCartCounter, cartItems, setCartItems }: ICar
                                 <span className="qtty">{item.quantity}</span>
                             </div>
 
-                            <div className='delete-container '>
+                            <div className='delete-container' onClick={() => DeleteCartItem(item.id)}>
                                 <svg xmlns="http://www.w3.org"
                                     viewBox="0 0 24 24"
-                                    onClick={() => DeleteItem(item.id)}
                                     className='svg-delete'>
-                                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                    <path d={Icons.deleteIcon} />
                                 </svg>
 
                             </div>
