@@ -85,20 +85,6 @@ npm run dev
 
 The app will be available at `http://localhost:5173/` (default Vite port).
 
-## Build for Production
-
-To build the project for production:
-
-```bash
-npm run build
-```
-
-To preview the production build locally:
-
-```bash
-npm run dev
-```
-
 
 ## Screenshots
 
