@@ -10,7 +10,7 @@ export interface IMerchandise {
 }
 
 export interface ICartItem extends IMerchandise {
-  quantity: number
+  quantity?: number
 }
 
 export const merchandiseItems: IMerchandise[] = [

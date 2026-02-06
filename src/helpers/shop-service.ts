@@ -1,4 +1,5 @@
-import { type IMerchandise, getMerchandiseByBrandAndType } from '../components/market/models/merchandise'
+import { type IMerchandise, getMerchandiseByBrandAndType }
+    from '../components/market/models/merchandise'
 
 import { type ICartItem } from '../components/market/models/merchandise'
 
@@ -29,6 +30,6 @@ class ShopService implements IShopService {
 
 
 
-export { ShopService, type IShopService, type IShopProps}
+export { ShopService, type IShopService, type IShopProps }
 
 
