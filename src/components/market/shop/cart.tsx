@@ -96,15 +96,20 @@ const ViewCart = (
                             </div>
                         </div>
 
-                        <div className='price-container cart-price'>
+                        <div className='price-container cart-price unit-price'>
                             <span className='price1 unit-price'>$</span>
-                            <span className='price2 unit-price'>{item.price.toFixed(0)}</span>
+                            <span className='price2 unit-price'>
+                                {(item.price).toFixed(2).split('.')[0]}
+                            </span>
                             <span className='price1 unit-price'>.{item.price.toFixed(2).split('.')[1]}</span>
                         </div>
 
-                        <div className='price-container cart-price'>
+
+                        <div className='price-container cart-price subtotal'>
                             <span className='price1'>$</span>
-                            <span className='price2'>{(item.price * item.quantity!).toFixed(0)}</span>
+                            <span className='price2'>
+                                {(item.price * item.quantity!).toFixed(2).split('.')[0]}
+                            </span>
                             <span className='price1'>.{(item.price * item.quantity!).toFixed(2).split('.')[1]}</span>
                         </div>
 

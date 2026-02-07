@@ -87,7 +87,9 @@ const Shop = (
 
                             <div className="price-container">
                                 <span className="price1">$</span>
-                                <span className="price2">{merch.price.toFixed(0)}</span>
+                                <span className="price2">
+                                    {merch.price.toFixed(2).split('.')[0]}
+                                </span>
                                 <span className="price3">.{merch.price.toFixed(2).split('.')[1]}</span>
                             </div>
                         </div>
