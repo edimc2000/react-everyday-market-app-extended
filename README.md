@@ -89,16 +89,16 @@ The app will be available at `http://localhost:5173/` (default Vite port).
 ## Screenshots
 
 ### Home Page - Category Selection
-![Category Menu](./screenshots/1_category_page.png)
+![Home Menu](./screenshots/1_category_page.png)
 
 ### Brands - filtered based on category
 ![Brands View](./screenshots/2_category_men.png)
 
 ### Shop - filtered based on brand 
-![Brands View](./screenshots/3_shop.png)
+![Shop View](./screenshots/3_shop.png)
 
 ### View cart items
-![Brands View](./screenshots/4-view_cart.png)
+![Cart View](./screenshots/4-view_cart.png)
 
 
 
@@ -233,9 +233,11 @@ interface IBrand {
 
 ## Testing
 
-**Status**: Not implemented yet
+Playwright test report: https://edimc2000.github.io/react-everyday-market-app-extended-playwright/ 
 
 
+### Test - sample trace
+![sample trace](./screenshots/5-sample_trace.png)
 
 <!-- Replace screenshots below with actual test results when tests are implemented -->
 
