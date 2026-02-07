@@ -74,7 +74,7 @@ const ViewCart = (
                         </div>
 
                         <div className="order-details-container">
-                            <span className="cart-upc">UPC {generateUPC(item.id)} </span>
+                            <span className="cart-upc">UPC{generateUPC(item.id)} </span>
                             <span className="brand">{item.brandName}</span>
 
                             <span className="cart-description">{item.item}</span>
