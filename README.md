@@ -236,8 +236,8 @@ interface IBrand {
 Playwright test report: https://edimc2000.github.io/react-everyday-market-app-extended-playwright/ 
 
 
-### Test - sample trace
-![sample trace](./screenshots/5-sample_trace.png)
+### Test - end to end sample trace
+![end to end sample trace](./screenshots/5-sample_trace.png)
 
 <!-- Replace screenshots below with actual test results when tests are implemented -->
 
