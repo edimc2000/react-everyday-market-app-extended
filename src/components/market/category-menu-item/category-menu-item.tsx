@@ -26,7 +26,7 @@ const OnCategorySelected = (props: ICategoryItemProps): JSX.Element => {
 
     return (
         <>
-            <span className={classCategoryTitle} data-testid='q' >{name}</span>
+            <span className={classCategoryTitle}>{name}</span>
             <img className={classImage} src={imageUrl} alt={description + ' image'} />
             <span className={classDescription}>{longDescription}</span>
         </>

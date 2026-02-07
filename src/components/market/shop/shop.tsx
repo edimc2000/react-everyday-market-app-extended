@@ -77,7 +77,7 @@ const Shop = (
                         <img className="category-image merch-image" src={merch.imageUrl} />
 
                         <div className='upc-container' >
-                            <span className="upc" >UPC {generateUPC(merch.id)}</span>
+                            <span className="upc" >UPC{generateUPC(merch.id)}</span>
                         </div>
 
                         <div className='merch-price-container '>

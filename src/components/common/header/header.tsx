@@ -16,7 +16,7 @@ const Header = ({ title, cartCount = 0 }: HeaderProps): JSX.Element => {
             <header className="app-header app-bg">
                 <div className="maxHeight flex flex-align-items--center">
                     <div className="logo-menu-container">
-                        <div className="shop-logo" onClick={() => navigate('/')}> {title}</div>
+                        <div className="shop-logo" onClick={() => navigate('/')} data-testid = "header-logo"> {title}</div>
                         <div className="menu-dummy">
                             <img src="/assets/images/cad.png" alt="" className="menu-icon" />
                             EN (CAD) | Find a Store | Sign in | Create an Account |
@@ -26,11 +26,11 @@ const Header = ({ title, cartCount = 0 }: HeaderProps): JSX.Element => {
                                 </svg>
                             </span>
                             
-                            <span className="shoppingbag" onClick={() => navigate('/cart')}>
+                            <span className="shoppingbag" onClick={() => navigate('/cart')} data-testid = "cart-link">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                     <path d={Icons.shoppingCart} />
                                 </svg>
-                                {cartCount > 0 && <span className="cart-counter">{cartCount}
+                                {cartCount > 0 && <span className="cart-counter" data-testid = "cart-counter" id = "cart-counter">{cartCount}
                                 </span>}
                             </span>
                         </div>
