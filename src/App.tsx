@@ -51,7 +51,7 @@ function App() {
 
   return (
     <>
-      <Header title='BARO' cartCount={cartCounter} />
+      <Header title='Baro' cartCount={cartCounter} />
 
       <div>
         <Routes>

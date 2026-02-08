@@ -236,6 +236,10 @@ interface IBrand {
 
 Playwright test report: https://edimc2000.github.io/react-everyday-market-app-extended-playwright/ 
 
+Note: The UI test logic (basic_ui_tests.spec.ts) and test data (brand-interface.ts) remain identical to the Angular implementation. The only modification is the target URL being tested.
+
+### Test Summary
+![test summary](./screenshots/6-test_summary.png)
 
 ### Test - end to end sample trace
 ![end to end sample trace](./screenshots/5-sample_trace.png)
