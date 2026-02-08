@@ -12,7 +12,7 @@
   animation-delay: calc(var(--delay-index, 0) * 1s);
 
   border: solid lightgray thin;
-  min-height: 650px !important;
+  min-height: 300px !important;
   border-radius: 10px;
   box-shadow: 0 8px 25px rgba(107, 107, 107, 0.3);
 }
@@ -141,12 +141,13 @@
   position: relative;
   width: fit-content;
   top: -50px;
-  left: 25px;
+  
   padding: 0.5rem;
   border-radius: 10px;
   background-color: rgb(255, 255, 255, 0.75);
   border: white solid thin;
   box-shadow: 0 8px 25px rgba(255, 0, 0, 0.11);
+  margin: 0 auto; 
 }
 
 .upc {
@@ -154,5 +155,6 @@
 }
 
 .merch-image {
-  padding-left: 0.85rem;
+  margin: 0 auto; 
+  width: 15rem;
 }

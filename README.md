@@ -31,6 +31,7 @@ Before running this project, ensure you have the following installed:
 - **Component-Based Architecture**: Modular React components with TypeScript for type safety
 - **Routing**: Multi-page navigation with React Router DOM
 - **State Management**: Lifted cart state for persistence across routes
+- **Cart counter and cart data persistence**: Cart counter and data will persist on multiple browser tabs and windows, data will also sync when data changes 
 
 ## Project Structure
 
