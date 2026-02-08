@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import { ProductsPage } from './components/market/products-page/products-page'
 import Header from './components/common/header/header'
@@ -10,16 +10,34 @@ import { ViewCart } from './components/market/shop/cart'
 
 
 function App() {
-  const [cartCounter, setCartCounter] = useState(0)
-  const [cartItems, setCartItems] = useState<ICartItem[]>([])
+  // Initialize state from sessionStorage or use defaults
+  const [cartCounter, setCartCounter] = useState(() => {
+    const stored = sessionStorage.getItem('cartCounter')
+    return stored ? parseInt(stored, 10) : 0
+  })
+
+  const [cartItems, setCartItems] = useState<ICartItem[]>(() => {
+    const stored = sessionStorage.getItem('cartItems')
+    return stored ? JSON.parse(stored) : []
+  })
+
+  // Save cartCounter to sessionStorage whenever it changes
+  useEffect(() => {
+    sessionStorage.setItem('cartCounter', cartCounter.toString())
+  }, [cartCounter])
+
+  // Save cartItems to sessionStorage whenever it changes
+  useEffect(() => {
+    sessionStorage.setItem('cartItems', JSON.stringify(cartItems))
+  }, [cartItems])
 
   return (
     <>
       <Header title='BARO' cartCount={cartCounter} />
-      
+
       <div>
         <Routes>
-      
+
           <Route path="/"
             element={<ProductsPage
             />}
@@ -37,7 +55,12 @@ function App() {
             element={<ViewCart
               cartCounter={cartCounter}
               setCartCounter={setCartCounter}
-              cartItems={cartItems} setCartItems={setCartItems}
+              
+              cartItems={cartItems} 
+              setCartItems={setCartItems}
+
+
+
             />}
           />
 
