@@ -10,26 +10,44 @@ import { ViewCart } from './components/market/shop/cart'
 
 
 function App() {
-  // Initialize state from sessionStorage or use defaults
+  // Initialize state from localStorage or use defaults
   const [cartCounter, setCartCounter] = useState(() => {
-    const stored = sessionStorage.getItem('cartCounter')
+    const stored = localStorage.getItem('cartCounter')
     return stored ? parseInt(stored, 10) : 0
   })
 
   const [cartItems, setCartItems] = useState<ICartItem[]>(() => {
-    const stored = sessionStorage.getItem('cartItems')
+    const stored = localStorage.getItem('cartItems')
     return stored ? JSON.parse(stored) : []
   })
 
-  // Save cartCounter to sessionStorage whenever it changes
+  // Save cartCounter to localStorage whenever it changes - - bug captured from playwright and implementation came with  playwright as well - persistent local storage
   useEffect(() => {
-    sessionStorage.setItem('cartCounter', cartCounter.toString())
+    localStorage.setItem('cartCounter', cartCounter.toString())
   }, [cartCounter])
 
-  // Save cartItems to sessionStorage whenever it changes
+  // Save cartItems to localStorage whenever it changes - bug captured from playwright and implementation came with  playwright as well - persistent local storage
   useEffect(() => {
-    sessionStorage.setItem('cartItems', JSON.stringify(cartItems))
+    localStorage.setItem('cartItems', JSON.stringify(cartItems))
   }, [cartItems])
+
+  // Sync cart state across tabs/windows - AI assited section
+  useEffect(() => {
+    const handleStorage = (event: StorageEvent) => {
+      if (event.key === 'cartCounter') {
+        const next = event.newValue ? parseInt(event.newValue, 10) : 0
+        setCartCounter(next)
+      }
+
+      if (event.key === 'cartItems') {
+        const next = event.newValue ? JSON.parse(event.newValue) : []
+        setCartItems(next)
+      }
+    }
+
+    window.addEventListener('storage', handleStorage)
+    return () => window.removeEventListener('storage', handleStorage)
+  }, [])
 
   return (
     <>
