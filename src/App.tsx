@@ -21,17 +21,23 @@ function App() {
     return stored ? JSON.parse(stored) : []
   })
 
-  // Save cartCounter to localStorage whenever it changes - - bug captured from playwright and implementation came with  playwright as well - persistent local storage
+  // Save cartCounter to localStorage whenever it changes - 
+  // Bug fix captured from playwright and implementation came with  playwright as well - persistent 
+  // local storage
+
   useEffect(() => {
     localStorage.setItem('cartCounter', cartCounter.toString())
   }, [cartCounter])
 
-  // Save cartItems to localStorage whenever it changes - bug captured from playwright and implementation came with  playwright as well - persistent local storage
+  // Save cartItems to localStorage whenever it changes 
+  // Bug fix captured from playwright and implementation came with  playwright as well - persistent 
+  // local storage
+
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems))
   }, [cartItems])
 
-  // Sync cart state across tabs/windows - AI assited section
+  // Sync cart state across tabs/windows - AI assited
   useEffect(() => {
     const handleStorage = (event: StorageEvent) => {
       if (event.key === 'cartCounter') {
@@ -77,8 +83,6 @@ function App() {
               cartItems={cartItems} 
               setCartItems={setCartItems}
 
-
-
             />}
           />
 
@@ -91,9 +95,3 @@ function App() {
 }
 
 export default App
-
-
-// /* <h1>Vite + React</h1>
-// <button onClick={() => setCount((count) => count + 1)}>
-//   count is {count}
-// </button> */
