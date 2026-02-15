@@ -46,6 +46,11 @@ const ViewCart = (
         }
     }, [cartCounter, navigate])
 
+    // Calculate total amount for all items in the cart
+    const totalAmount = cartItems.reduce((sum, item) => sum + item.price * (item.quantity ?? 0), 0)
+    // Flat rate shipping fee
+    const shippingFee = 21
+
     if (cartCounter === 0) {
         return (
             <div className='main-container'>
@@ -63,10 +68,9 @@ const ViewCart = (
 
 
     return (
-        <>
-            <div className='main-container'>
+        <div className='main-container'>
+            <div className="cart-entries-left">
                 <CartDisplay.renderCartHeader />
-
                 {cartItems.map((item) => (
                     <div key={item.id} className="order-container">
                         <div className="image-container"  >
@@ -116,7 +120,35 @@ const ViewCart = (
                     </div>
                 ))}
             </div>
-        </>
+
+            <div className="cart-entries-right">
+                <span className='order-summary-title'>Order Summary</span>
+
+                <div className="cart-summary-row">
+                    <span className="cart-summary-label">Sub-total ({cartCounter} items)</span>
+                    <span className="cart-summary-amount">${totalAmount.toFixed(2)}</span>
+                </div>
+
+                <div className="cart-summary-row">
+                    <span className="cart-summary-label">Shipping</span>
+                    <span className="cart-summary-amount">${shippingFee.toFixed(2)}</span>
+                </div>
+
+                <div className="cart-summary-row">
+                    <span className="cart-summary-label">Total (tax incl)</span>
+                    <span className="cart-summary-amount">${(shippingFee + totalAmount).toFixed(2)}</span>
+                </div>
+
+
+                <div className="cart-summary-checkout">
+                    <button className="add-to-cart" >
+                        Checkout
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
     )
 }
 
