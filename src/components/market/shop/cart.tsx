@@ -51,6 +51,9 @@ const ViewCart = (
     // Flat rate shipping fee
     const shippingFee = 21
 
+    // Helper to format currency with commas
+    const formatCurrency = (amount: number) => amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
     if (cartCounter === 0) {
         return (
             <div className='main-container'>
@@ -124,19 +127,20 @@ const ViewCart = (
             <div className="cart-entries-right">
                 <span className='order-summary-title'>Order Summary</span>
 
+
                 <div className="cart-summary-row">
                     <span className="cart-summary-label">Sub-total ({cartCounter} items)</span>
-                    <span className="cart-summary-amount">${totalAmount.toFixed(2)}</span>
+                    <span className="cart-summary-amount">${formatCurrency(totalAmount)}</span>
                 </div>
 
                 <div className="cart-summary-row">
                     <span className="cart-summary-label">Shipping</span>
-                    <span className="cart-summary-amount">${shippingFee.toFixed(2)}</span>
+                    <span className="cart-summary-amount">${formatCurrency(shippingFee)}</span>
                 </div>
 
                 <div className="cart-summary-row">
-                    <span className="cart-summary-label">Total (tax incl)</span>
-                    <span className="cart-summary-amount">${(shippingFee + totalAmount).toFixed(2)}</span>
+                    <span className="cart-summary-label total">Total (tax incl)</span>
+                    <span className="cart-summary-amount ">${formatCurrency(shippingFee + totalAmount)}</span>
                 </div>
 
 

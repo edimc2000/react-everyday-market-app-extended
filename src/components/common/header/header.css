@@ -1,5 +1,9 @@
 .header-container {
   border-bottom: 0.1rem rgba(133, 133, 133, 0.3) solid;
+  background-color: rgb(255, 255, 255) !important;
+  top: 0px; /* Distance from top when sticky */
+  position: sticky;
+  z-index: 200;
 }
 
 .app-header {
@@ -106,4 +110,27 @@ a:focus {
   line-height: 1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 10; /* Ensure it appears above the SVG */
+}
+
+.cart-counter-value {
+  display: inline-block;
+  animation: cart-slide-down 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes cart-slide-down {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

@@ -19,8 +19,8 @@ export class CartDisplay {
             <div className="order-container order-header">
                 <div className="image-container" />
                 <div className="order-details-container" />
-                <div className="price-container cart-header">Unit<br/>Price</div>
-                <div className="price-container cart-header">Item<br/>Sub-total</div>
+                <div className="cart-header">Unit Price</div>
+                <div className="cart-header">Item Sub-total</div>
             </div>
         )
     }
