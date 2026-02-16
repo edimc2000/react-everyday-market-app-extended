@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif !important;
+   font-family: 'Open Sans', sans-serif !important;
 }
 
 .main-container {
@@ -10,4 +10,6 @@ body {
   flex-wrap: wrap;
   align-items: flex-start; /* Top alignment */
   align-content: flex-start; /* Also align the whole content to top */
+
+  
 }
