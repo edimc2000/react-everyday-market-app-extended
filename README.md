@@ -244,7 +244,7 @@ Note: The UI test logic (basic_ui_tests.spec.ts) and test data (brand-interface.
 ### Test - end to end sample trace
 ![end to end sample trace](./screenshots/5-sample_trace.png)
 
-<!-- Replace screenshots below with actual test results when tests are implemented -->
+
 
 
 
